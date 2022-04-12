@@ -1,20 +1,20 @@
 from pyspark import SparkContext, SparkConf
+from pyspark.sql import SQLContext
+
+sc = SparkContext(conf=conf)
+sqlContext=SQLContext(sc)
+
 from pyspark.streaming import StreamingContext
 from pyspark.streaming.kafka import KafkaUtils
-import json
-import os
-import smtplib
-import time
-import datetime
 
+# Create streaming task
+ssc = StreamingContext(sc, 0.10)
+kafkaStream = KafkaUtils.createStream(ssc, "<HOSTNAMME:IP>", "spark-streaming-consumer", {'TOPIC1': 1})
 
+query = kafkaStream \
+        .writeStream \
+        .outputMode("complete") \
+        .format("console") \
+        .start()
 
-
-# Subscribe to 1 topic
-df = spark \
-  .readStream \
-  .format("kafka") \
-  .option("kafka.bootstrap.servers", "host1:port1,host2:port2") \
-  .option("subscribe", "topic1") \
-  .load()
-df.selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
+query.awaitTermination()
