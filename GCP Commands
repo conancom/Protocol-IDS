@@ -3,6 +3,14 @@ gcloud dataproc jobs submit spark  --jar=gs://example-bucket-visor/testingsbt_2.
 
 gcloud dataproc jobs submit pyspark     gs://example-bucket-visor/testingsbt_2.12-0.1.0-SNAPSHOT.jar     --cluster=cluster-81be  --properties spark.jars.packages=org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.2    --region=asia-southeast2
 
+For Testing to use Spark Streaming:
+
+1) Using 2 properties at once
+gcloud dataproc jobs submit spark  --jar=gs://example-bucket-visor/testingsbt_2.12-0.1.0-SNAPSHOT.jar     --cluster=cluster-81be  --properties spark.jars.packages=org.apache.spark:spark-streaming-kafka-0-10_2.12:3.1.2 spark.jars.packages=org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.2    --region=asia-southeast2
+
+2) Using the one that is missing
+gcloud dataproc jobs submit spark  --jar=gs://example-bucket-visor/testingsbt_2.12-0.1.0-SNAPSHOT.jar     --cluster=cluster-81be  --properties spark.jars.packages=org.apache.spark:spark-streaming-kafka-0-10_2.12:3.1.2    --region=asia-southeast2
+
 
 Version: 
 
