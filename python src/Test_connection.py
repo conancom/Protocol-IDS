@@ -1,20 +1,26 @@
-from pyspark import SparkContext, SparkConf
-from pyspark.sql import SQLContext
+import pyspark
+from pyspark import SQLContext
+from pyspark.shell import spark
+from pyspark.sql import SparkSession
 
-sc = SparkContext(conf=conf)
-sqlContext=SQLContext(sc)
+sc = SparkSession \
+        .builder \
+        .master('10.184.0.5:7077') \
+        .appName("sparkFromJupyter") \
+        .getOrCreate()
+sqlContext = SQLContext(sparkContext=sc.sparkContext, sparkSession=sc)
+print("Spark Version: " + sc.version)
+print("PySpark Version: " + pyspark.__version__)
 
-from pyspark.streaming import StreamingContext
-from pyspark.streaming.kafka import KafkaUtils
 
-# Create streaming task
-ssc = StreamingContext(sc, 0.10)
-kafkaStream = KafkaUtils.createStream(ssc, "<HOSTNAMME:IP>", "spark-streaming-consumer", {'TOPIC1': 1})
 
-query = kafkaStream \
-        .writeStream \
-        .outputMode("complete") \
-        .format("console") \
-        .start()
+df = spark \
+  .readStream \
+  .format("kafka") \
+  .option("kafka.bootstrap.servers", "10.184.0.3:9092") \
+  .option("subscribe", "get") \
+  .load()
 
-query.awaitTermination()
+
+df.selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
+df.show()

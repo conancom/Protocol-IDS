@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Leon\Documents\Spark Stuff\src\main\scala\HelloWorld.scala:24:7: ')' expected but string literal found.[0m
+[0m[[0m[31merror[0m] [0m[0m      "group.id" -> "use_a_separate_group_id_for_each_stream",[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Leon\Documents\Spark Stuff\src\main\scala\HelloWorld.scala:27:5: ';' expected but ')' found.[0m
+[0m[[0m[31merror[0m] [0m[0m    )[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
