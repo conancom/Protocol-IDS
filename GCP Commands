@@ -33,7 +33,7 @@ PUT)
 ip:127.0.0.1 user-identifier frank [10/Oct/2000:13:55:36 -0700] header:"GET /apache_pb.gif HTTP/1.0" 200 2326
 
 PUT for SQLi) 
-ip:127.0.0.1 user-identifier frank [10/Oct/2000:13:55:36 -0700] header:"GET /message&password=id=message2 HTTP/1.0" 200 2326
+ip:127.0.0.1 user-identifier frank [10/Oct/2000:13:55:36 -0700] header:"GET /id=message&password=message2 HTTP/1.0" 200 2326
 
 DELETE) 
 ip:127.0.0.1 user-identifier frank [10/Oct/2000:13:55:36 -0700] header:"GET /apache_pb.gif HTTP/1.0" 200 2326
