@@ -1,26 +1,30 @@
-import pyspark
-from pyspark import SQLContext
-from pyspark.shell import spark
-from pyspark.sql import SparkSession
+#    Spark
+from pyspark import SparkContext
+#    Spark Streaming
+from pyspark.streaming import StreamingContext
+#    Kafka
+from pyspark.streaming.kafka import KafkaUtils
+#    json parsing
+import json
 
-sc = SparkSession \
-        .builder \
-        .master('10.184.0.5:7077') \
-        .appName("sparkFromJupyter") \
-        .getOrCreate()
-sqlContext = SQLContext(sparkContext=sc.sparkContext, sparkSession=sc)
-print("Spark Version: " + sc.version)
-print("PySpark Version: " + pyspark.__version__)
+# Every 5 seconds
+sc = SparkContext(master="local[4]", appName="TestPy",)
+ssc = StreamingContext(sc, 5)
 
+lines = KafkaUtils.createStream(ssc, '10.184.0.3:9092', "get", {'get':1})
 
+# Split each line in each batch into words
+words = lines.flatMap(lambda line: line[1].split(" "))
 
-df = spark \
-  .readStream \
-  .format("kafka") \
-  .option("kafka.bootstrap.servers", "10.184.0.3:9092") \
-  .option("subscribe", "get") \
-  .load()
+# Count each word in each batch
+pairs = words.map(lambda word: (word, 1))
+wordCounts = pairs.reduceByKey(lambda x, y: x + y)
 
+# Print the elements of each RDD generated in this DStream to the console
+wordCounts.pprint()
 
-df.selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
-df.show()
+# Start the computation
+ssc.start()
+
+# Wait for the computation to terminate
+ssc.awaitTermination()
