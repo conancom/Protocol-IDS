@@ -1,0 +1,15 @@
+-> "AND ", "OR ", "UNION ", "CASE ", "SELECT ", "'OR'",  
+
+
+//val lines = stream.flatMap(_.value().split(" "))
+
+    stream.foreachRDD { rdd =>
+      //
+      val ip = rdd.filter(_.contains(" 'AND ' or 'OR ' "))  -> /?username=y'--&password=x' OR '1' = '1';
+      val collected = ip.map(record => (record, 1))
+      val counts = collected.reduceByKey((x, y) => x + y).collect()
+      //val collected = rdd.map(record => ( record.key(), record.value() )).collect()
+      for (c <- counts) {
+        println(c)
+      }
+    }

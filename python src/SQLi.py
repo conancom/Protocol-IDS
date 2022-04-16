@@ -1,5 +1,12 @@
+import sparkpickle
+from pyspark.ml import Pipeline
+from pyspark.ml.classification import LogisticRegression
+from pyspark.ml.feature import HashingTF, Tokenizer
 import joblib
 import pickle
+import base64
+
+
 
 # Load the model from the file
 randomForest_from_joblib = joblib.load('RandomForest.pkl')

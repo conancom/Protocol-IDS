@@ -20,8 +20,25 @@ import scala.util.Random
 
 object SQLi {
 
+
+  def runpython(file:String)={
+
+    Seq("python",file)
+    Seq("python"
+      ,"-c"
+      ,"print('Hello from python in Scala');"
+    )
+  }
+
+
   def main(args: Array[String]) {
 
+    println("Hello from Scala")
+
+    val file="/Test.py"
+    runpython(file)
+
+/*
     val modelPath = "Random"
 
 
@@ -67,6 +84,6 @@ object SQLi {
     println("StreamingWordCount: await termination")
     stream.context.awaitTermination()
     println("StreamingWordCount: done!")
-
+*/
   }
 }
