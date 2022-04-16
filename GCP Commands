@@ -41,6 +41,9 @@ ip:127.0.0.1 user-identifier frank [10/Oct/2000:13:55:36 -0700] header:"DELETE /
 DELETE for SQLi) 
 ip:127.0.0.1 user-identifier frank [10/Oct/2000:13:55:36 -0700] header:"DELETE id=message&id=message2&password=message3 HTTP/1.0" 200 2326
 
+AI:
+gcloud ai-platform local predict --model-dir gs://model-randome-forest-sqli/ --framework  scikit-learn --json-instances gs://model-randome-forest-sqli/result.json
+
 Version: 
 
   Scala 2.12.14
