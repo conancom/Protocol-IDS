@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BruteForce.iml" filepath="$PROJECT_DIR$/.idea/modules/BruteForce.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BruteForce-build.iml" filepath="$PROJECT_DIR$/.idea/modules/BruteForce-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SQLi.iml" filepath="$PROJECT_DIR$/.idea/modules/SQLi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SQLi-build.iml" filepath="$PROJECT_DIR$/.idea/modules/SQLi-build.iml" />
     </modules>
   </component>
 </project>

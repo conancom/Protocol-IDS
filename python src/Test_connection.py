@@ -1,30 +1,32 @@
-#    Spark
-from pyspark import SparkContext
-#    Spark Streaming
-from pyspark.streaming import StreamingContext
-#    Kafka
-from pyspark.streaming.kafka import KafkaUtils
-#    json parsing
-import json
+from pyspark.sql import SparkSession
 
-# Every 5 seconds
-sc = SparkContext(master="local[4]", appName="TestPy",)
-ssc = StreamingContext(sc, 5)
 
-lines = KafkaUtils.createStream(ssc, '10.184.0.3:9092', "get", {'get':1})
 
-# Split each line in each batch into words
-words = lines.flatMap(lambda line: line[1].split(" "))
+spark = SparkSession \
+        .builder \
+        .appName("test") \
+        .config("spark.sql.debug.maxToStringFields", "100") \
+        .getOrCreate()
 
-# Count each word in each batch
-pairs = words.map(lambda word: (word, 1))
-wordCounts = pairs.reduceByKey(lambda x, y: x + y)
 
-# Print the elements of each RDD generated in this DStream to the console
-wordCounts.pprint()
 
-# Start the computation
-ssc.start()
+kafka_df = spark.readStream \
+    .format("kafka") \
+    .option("kafka.bootstrap.servers", "10.184.0.3:9092") \
+    .option("failOnDataLoss", "false") \
+    .option("subscribe", "get") \
+    .option("includeHeaders", "true") \
+    .option("startingOffsets", "latest") \
+    .option("spark.streaming.kafka.maxRatePerPartition", "50") \
+    .load()
 
-# Wait for the computation to terminate
-ssc.awaitTermination()
+
+def func_call(df, batch_id):
+    df.selectExpr("CAST(value AS STRING) as json")
+    requests = df.rdd.map(lambda x: x.value).collect()
+
+
+    query = kafka_df.writeStream \
+    .foreachBatch(func_call) \
+    .trigger(processingTime="10 seconds") \
+    .start().awaitTermination()

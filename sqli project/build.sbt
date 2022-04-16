@@ -4,7 +4,7 @@ ThisBuild / scalaVersion := "2.12.14"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "BruteForce"
+    name := "SQLi"
   )
 
 
@@ -17,7 +17,10 @@ libraryDependencies += "org.apache.spark" %% "spark-streaming-kafka-0-10" % "3.1
 libraryDependencies += "org.apache.spark" %% "spark-streaming" % "3.1.2" % "provided"
 // https://mvnrepository.com/artifact/org.apache.spark/spark-sql
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.1.2" % "provided"
+// https://mvnrepository.com/artifact/org.apache.spark/spark-mllib
+libraryDependencies += "org.apache.spark" %% "spark-mllib" % "3.2.1" % "provided"
 libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % "3.1.2" % "provided"
+
 
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="TestingSBT,scala-working-code_1834" />
+    <profile name="sbt 1" modules="BruteForce,SQLi,TestingSBT,scala-working-code_1834" />
   </component>
 </project>
