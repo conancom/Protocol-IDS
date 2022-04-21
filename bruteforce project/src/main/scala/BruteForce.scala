@@ -19,7 +19,7 @@ object BruteForce {
 
 
     val kafkaParams = Map[String, Object](
-      "bootstrap.servers" -> "10.184.0.3:9092",
+      "bootstrap.servers" -> "10.184.0.5:9092",
       "key.deserializer" -> classOf[StringDeserializer],
       "value.deserializer" -> classOf[StringDeserializer],
       "group.id" -> "get",
@@ -47,7 +47,9 @@ object BruteForce {
       val counts = collected.reduceByKey((x, y) => x + y).collect()
       //val collected = rdd.map(record => ( record.key(), record.value() )).collect()
       for (c <- counts) {
-        println(c)
+        if (c._2 > 5 ) {
+          println(c + " Alert, might be Brute Forcing")
+        }
       }
     }
 

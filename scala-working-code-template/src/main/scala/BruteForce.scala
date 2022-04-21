@@ -1,3 +1,7 @@
+import akka.actor.AbstractActor.Receive
+import akka.actor.TypedActor.context
+import akka.io.Tcp
+import io.netty.util.concurrent.Future
 import org.apache.spark.{SparkConf, SparkContext, rdd}
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.common.serialization.StringDeserializer
@@ -8,6 +12,15 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.kafka010._
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
+import io.socket
+import okio.Sink
+import org.apache.spark.sql.streaming.DataStreamWriter
+import org.sparkproject.jetty.client.ConnectionPool
+
+import java.io.PrintStream
+import java.net.ServerSocket
+import java.time.InstantSource.system
+
 
 
 object BruteForce {
@@ -19,7 +32,7 @@ object BruteForce {
 
 
     val kafkaParams = Map[String, Object](
-      "bootstrap.servers" -> "10.184.0.3:9092",
+      "bootstrap.servers" -> "10.184.0.5:9092",
       "key.deserializer" -> classOf[StringDeserializer],
       "value.deserializer" -> classOf[StringDeserializer],
       "group.id" -> "get",
@@ -51,11 +64,21 @@ object BruteForce {
       }
     }
 
+    val server = new ServerSocket(5000)
+    val conn = server.accept()
+    val out = new PrintStream(conn.getOutputStream)
+
+    lines.foreachRDD(rdd => {rdd.collect.foreach(record=>{out.println(record)})})
+
+
+
+
     println("StreamingWordCount: streamingContext start")
     stream.context.start()
     println("StreamingWordCount: await termination")
     stream.context.awaitTermination()
     println("StreamingWordCount: done!")
+
 
   }
 }

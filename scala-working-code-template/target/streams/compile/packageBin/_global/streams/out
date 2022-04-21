@@ -1,11 +1,17 @@
-[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code\target\scala-2.12\bruteforce_2.12-1.0.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code-template\target\scala-2.12\bruteforce_2.12-1.0.0.jar ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	assemblySettings$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code\target\scala-2.12\classes\assemblySettings$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code-template\target\scala-2.12\classes\assemblySettings$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	assemblySettings.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code\target\scala-2.12\classes\assemblySettings.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code-template\target\scala-2.12\classes\assemblySettings.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BruteForce$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code\target\scala-2.12\classes\BruteForce$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code-template\target\scala-2.12\classes\BruteForce$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BruteForce.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code\target\scala-2.12\classes\BruteForce.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code-template\target\scala-2.12\classes\BruteForce.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	HelloWorld$$typecreator4$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code-template\target\scala-2.12\classes\HelloWorld$$typecreator4$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	HelloWorld$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code-template\target\scala-2.12\classes\HelloWorld$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	HelloWorld.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code-template\target\scala-2.12\classes\HelloWorld.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
