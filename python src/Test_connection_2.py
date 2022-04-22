@@ -7,34 +7,25 @@ from pyspark.sql.functions import explode
 from pyspark.sql.functions import split
 
 if __name__ == "__main__":
-    # create Spark context with necessary configuration
-    spark = SparkSession \
-        .builder \
-        .appName("StructuredNetworkWordCount") \
-        .getOrCreate()
 
-    # Create DataFrame representing the stream of input lines from connection to localhost:9999
-    lines = spark \
-        .readStream \
-        .format("socket") \
-        .option("host", "localhost") \
-        .option("port", 5000) \
-        .load()
+    batchIntervalSeconds = 10
+    sc = SparkContext(appName='TestConnection')
+    ssc = StreamingContext(sc, batchIntervalSeconds)
+    # Set each DStreams in this context to remember RDDs it generated in the last given duration.
+    # DStreams remember RDDs only for a limited duration of time and releases them for garbage
+    # collection. This method allows the developer to specify how long to remember the RDDs (
+    # if the developer wishes to query old data outside the DStream computation).
 
-    # Split the lines into words
-    words = lines.select(
-        explode(
-            split(lines.value, " ")
-        ).alias("word")
-    )
+    lines = ssc.socketTextStream('0.0.0.0', 9999)
+    lines.pprint()
 
-    # Generate running word count
-    wordCounts = words.groupBy("word").count()
-    query = wordCounts \
-        .writeStream \
-        .outputMode("complete") \
-        .format("console") \
-        .start()
+    words = lines.flatMap(lambda line: line.split(","))
+    pairs = words.map(lambda word: (word, 1))
+    wordCounts = pairs.reduceByKey(lambda x, y: x + y)
+    # This line starts the streaming context in the background.
+    ssc.start()
 
-    query.awaitTermination()
+    # This ensures the cell is put on hold until the background streaming thread is started properly.
+    ssc.awaitTermination();
+
 

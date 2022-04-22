@@ -50,9 +50,9 @@ object BruteForce {
     // Print as Raw Input
     stream.map(record=>(record.value().toString)).print
 
-    val lines = stream.flatMap(_.value().split(" "))
+    //val lines = stream.flatMap(_.value().split(" "))
 
-
+    /*
     lines.foreachRDD { rdd =>
       //
       val ip = rdd.filter(_.contains("ip"))
@@ -62,19 +62,18 @@ object BruteForce {
       for (c <- counts) {
         println(c)
       }
-    }
-
-    val server = new ServerSocket(5000)
-    val conn = server.accept()
-    val out = new PrintStream(conn.getOutputStream)
-
-    lines.foreachRDD(rdd => {rdd.collect.foreach(record=>{out.println(record)})})
-
+    }*/
 
 
 
     println("StreamingWordCount: streamingContext start")
     stream.context.start()
+
+    val server = new ServerSocket(9999)
+    val conn = server.accept()
+    val out = new PrintStream(conn.getOutputStream)
+
+    stream.foreachRDD(rdd => {rdd.collect.foreach(record=>{out.println(record)})})
     println("StreamingWordCount: await termination")
     stream.context.awaitTermination()
     println("StreamingWordCount: done!")
