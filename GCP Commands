@@ -13,6 +13,10 @@ gcloud dataproc jobs submit spark --jar=gs://example-bucket-visor/socket_test.ja
 gcloud dataproc jobs submit pyspark gs://example-bucket-visor/Test_connection_2.py --cluster=cluster-protocol-ids --region=asia-southeast2
 
 
+Python 2.4;
+gcloud dataproc jobs submit pyspark gs://example-bucket-visor/SQLi.py --cluster=cluster-for-pyspark --properties spark.jars.packages=org.apache.spark:spark-streaming-kafka-0-8_2.11:2.4    --region=asia-southeast2
+
+
 
 Without Added Libray:
 
