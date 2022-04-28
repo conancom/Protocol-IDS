@@ -38,6 +38,9 @@ gcloud dataproc jobs submit spark  --jar=gs://example-bucket-visor/testingsbt_2.
 
 ## Template for Logs:
 
+### NEW
+ip:127.0.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"POST /?id=1' or '1' = '1'&password=message2 HTTP/1.0", status:200
+
 GET) 
 ip:127.0.0.1 user-identifier frank [10/Oct/2000:13:55:36 -0700] header:"GET /apache_pb.gif HTTP/1.0" 200 2326
 
