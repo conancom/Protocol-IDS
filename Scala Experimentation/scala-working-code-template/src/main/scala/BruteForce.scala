@@ -32,7 +32,7 @@ object BruteForce {
 
 
     val kafkaParams = Map[String, Object](
-      "bootstrap.servers" -> "10.184.0.5:9092",
+      "bootstrap.servers" -> "10.148.0.5:9092",
       "key.deserializer" -> classOf[StringDeserializer],
       "value.deserializer" -> classOf[StringDeserializer],
       "group.id" -> "get",

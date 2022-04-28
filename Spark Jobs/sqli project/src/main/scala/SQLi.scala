@@ -2,6 +2,7 @@ import org.apache.spark.{SparkConf, SparkContext, rdd}
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark
+import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.streaming.dstream.DStream
 import org.apache.spark.streaming.{Seconds, StreamingContext}
@@ -16,10 +17,11 @@ object BruteForce {
 
     val conf = new SparkConf().setAppName("WordCount")
     val ssc = new StreamingContext(conf, Seconds(10))
+    val SQLi_payload_list: List[String] = List ("select","char","int","distinct","cast","union","column","column_name","table","table_name","table_schema","concat","convert","benchmark","count","generate_series","information_schema","schemata","ctxsys","drithsx","sn","login_test","tb_login","iif","ord","mid","make_set","json_keys","elt","sleep","procedure","analyse","extractvalue","MD5","null","WMlF","axUU","pLQD","VzxF","COIj","hOre","BPiw","yFlw","JVvY","dZkl","RjPx","CENp","xwDm","vjdV","cNbH","SFyR","aTVH","ZsKF","CyJp","rZMF","cUjj","EUxQ","LCju","kuta","XZeD","hAqN","CpcV","PoLE","VFvf","Obus","ekYn","yJsI","DmJo","QRPk","hDNb","GArX","jTQx","gmvs","NZwC","JUku","UOXN","CFqL","akSy","UGlQ","XEqz","Kflk","szIf","pCpU","wjwv","brAJ","kdZk","qovn","qajJ","Vdgm","dCgi","jSJQ","weOs","FGfr","SVtI","putE","pPdn","cBRe","NClW","Cyed","WFDK","rsAn","ryFD","FUoB","xDQE","JEnX","nlZq","Grvx","rSth","YFJq","bpul","oYfK","EcoY","MMjX","lPcI","tZjB","EKWp","SjoD","itwk","fRLP","dMoi","hqAi","Coax","uPqw","zvVc","VuGr","RsCt","VBDT","QoSP","NKWH","pBVS","mMBU","fQZL","lLXh","kKQQ","%","=","(",")","\\","#","+", "or", "||","1=1","AND","OR","'","-","<",">","*")
 
 
     val kafkaParams = Map[String, Object](
-      "bootstrap.servers" -> "10.184.0.3:9092",
+      "bootstrap.servers" -> "10.148.0.5:9092",
       "key.deserializer" -> classOf[StringDeserializer],
       "value.deserializer" -> classOf[StringDeserializer],
       "group.id" -> "get",
@@ -36,14 +38,23 @@ object BruteForce {
 
     // Print as Raw Input
     stream.map(record => (record.value().toString)).print
-
-    val lines = stream.flatMap(_.value().split(" "))
-
+    var contains: RDD[String] = ssc.sparkContext.emptyRDD[(String)]
+    val lines = stream.flatMap(_.value().split(","))
+    // ip:127.0.0.1
+    // user-identifier:UD11
+    // name:frank
+    // time-stamp:[10/Oct/2000:13:55:36 -0700]
+    // header:"POST /?id=1' or '1' = '1'&password=message2 HTTP/1.0"
+    // status:200
 
     lines.foreachRDD { rdd =>
-      //
-      val ip = rdd.filter(_.contains("AND ", "OR ", ""))
-      val collected = ip.map(record => (record, 1))
+      val payload = rdd.filter(_.contains("header:"))
+      for (pl <- SQLi_payload_list){
+
+          contains = payload.filter(_.contains(pl)).union(contains)
+      }
+      //val ip = contains.filter(x => SQLi_payload_list.contains(x))
+      val collected = contains.map(record => (record, 1))
       val counts = collected.reduceByKey((x, y) => x + y).collect()
       //val collected = rdd.map(record => ( record.key(), record.value() )).collect()
       for (c <- counts) {
@@ -51,6 +62,12 @@ object BruteForce {
 
       }
     }
+
+    println("StreamingWordCount: streamingContext start")
+    stream.context.start()
+    println("StreamingWordCount: await termination")
+    stream.context.awaitTermination()
+    println("StreamingWordCount: done!")
 
 
   }

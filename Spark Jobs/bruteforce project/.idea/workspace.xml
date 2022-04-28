@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec401fb5-0f5d-4e56-980d-61de9bd82390" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/BruteForce.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/BruteForce.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/.idea/modules/BruteForce-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/.idea/modules/BruteForce-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/.idea/modules/BruteForce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/.idea/modules/BruteForce.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/src/main/scala/BruteForce.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/src/main/scala/BruteForce.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +24,7 @@
     </projectState>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sqli project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -78,6 +80,7 @@
       <workItem from="1650425578919" duration="1309000" />
       <workItem from="1650548561264" duration="42000" />
       <workItem from="1650786912328" duration="481000" />
+      <workItem from="1651114661162" duration="2449000" />
     </task>
     <servers />
   </component>
