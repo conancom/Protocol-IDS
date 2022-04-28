@@ -14,8 +14,13 @@ object BruteForce {
 
   def main(args: Array[String]) {
 
-    val conf = new SparkConf().setAppName("WordCount")
+    val conf = new SparkConf().setAppName("brute-force")
     val ssc = new StreamingContext(conf, Seconds(10))
+    var requestsPerSecUser: Int = args(0).toInt;
+
+    if (requestsPerSecUser == 0){
+      requestsPerSecUser = 10
+    }
 
 
     val kafkaParams = Map[String, Object](

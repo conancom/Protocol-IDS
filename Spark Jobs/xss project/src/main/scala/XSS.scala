@@ -11,24 +11,25 @@ import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 
 
-object SQLi {
+object XSS {
 
   def main(args: Array[String]) {
 
-    val conf = new SparkConf().setAppName("sqli-payload-detection")
+    val conf = new SparkConf().setAppName("xss-payload-detection")
     val ssc = new StreamingContext(conf, Seconds(10))
-    val SQLi_payload_list: List[String] = List ("char","int","distinct","cast","union","column","column_name",
-      "table","table_name","table_schema","concat","convert","benchmark","count","generate_series","information_schema",
-      "schemata","ctxsys","drithsx","sn","login_test","tb_login","iif","ord","mid","make_set","json_keys","elt","sleep",
-      "procedure","analyse","extractvalue","MD5","null","WMlF","axUU","pLQD","VzxF","COIj","hOre","BPiw","yFlw","JVvY",
-      "dZkl","RjPx","CENp","xwDm","vjdV","cNbH","SFyR","aTVH","ZsKF","CyJp","rZMF","cUjj","EUxQ","LCju","kuta","XZeD",
-      "hAqN","CpcV","PoLE","VFvf","Obus","ekYn","yJsI","DmJo","QRPk","hDNb","GArX","jTQx","gmvs","NZwC","JUku","UOXN",
-      "CFqL","akSy","UGlQ","XEqz","Kflk","szIf","pCpU","wjwv","brAJ","kdZk","qovn","qajJ","Vdgm","dCgi","jSJQ","weOs",
-      "FGfr","SVtI","putE","pPdn","cBRe","NClW","Cyed","WFDK","rsAn","ryFD","FUoB","xDQE","JEnX","nlZq","Grvx","rSth",
-      "YFJq","bpul","oYfK","EcoY","MMjX","lPcI","tZjB","EKWp","SjoD","itwk","fRLP","dMoi","hqAi","Coax","uPqw","zvVc",
-      "VuGr","RsCt","VBDT","QoSP","NKWH","pBVS","mMBU","fQZL","lLXh","kKQQ","%","=","(",")","\\","#","+", "or", "||",
-      "1=1","AND","OR","'","-","<",">","*");
-
+    val xss_payload_list: List[String] = List("<image", "<audio", "<video",
+      "<body", "<object",  "<script",  "<svg",  "<title",  "<iframe",  "<frameset",
+      "<html",  "<bgsound",  "<style",  "<applet",  "<marquee",  "<xml",  "--><!--",
+      "<!--\\x3E<img",  "`/\"'><img",  "<a",  "<script>/*",  "\"'`>ABC<div",  "ABC<div",
+      "<input",  "<form",  "<math",  "<table",  "<li", "<embed", "<b", "<div", "<x",
+      "<!", "<?", "</", "<%", "<link", "<style>@import", "<//", "<meta",
+      "<vmlframe", "<event-source", "<FRAMESET><FRAME", "<BR", "<LAYER", "<XSS",
+      "<STYLE>li", "<!--[if", "<BASE", "<P", "<?xml", "<SCRIPT/XSS", "<form><textarea",
+      "<var", "<TD", "&lt;DIV", "<;IMG", "<;SCRIPT", "<;BASE", "<;STYLE",
+      "<;DIV", "<;HTML", "<;BODY", "<;BGSOUND", "<;IFRAME", "<;INPUT", "<;TABLE", "<;XML", "<;?",
+      "<;BR", "<;XSS", "<;META", "<;A", "\"-prompt(8)-\"", "'-prompt(8)-'", "\";a=prompt,a()//",
+      "';a=prompt,a()//", "'-eval", "\"-eval", "\"onclick=prompt(8)", "script>", "script%",
+      "src=xxx:x", "&lt;", "XSS", "xss", "&#x", "(88,83,83)");
 
     val kafkaParams = Map[String, Object](
       "bootstrap.servers" -> "10.148.0.5:9092",
@@ -60,10 +61,10 @@ object SQLi {
     lines.foreachRDD { rdd =>
       val payload = rdd.filter(_.contains("header:"))
 
-      var contains = payload.filter(_.contains("select"))
+      var contains = payload.filter(_.contains("<img"))
 
-      for (pl <- SQLi_payload_list){
-          contains = payload.filter(_.contains(pl)).union(contains)
+      for (pl <- xss_payload_list){
+        contains = payload.filter(_.contains(pl)).union(contains)
       }
       //val ip = contains.filter(x => SQLi_payload_list.contains(x))
       val collected = contains.map(record => (record, 1))
