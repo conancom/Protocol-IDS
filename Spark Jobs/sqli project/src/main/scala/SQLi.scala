@@ -49,7 +49,10 @@ object SQLi {
     // Print as Raw Input
     stream.map(record => (record.value().toString)).print
     // RDD[String] = ssc.sparkContext.emptyRDD[(String)]
+
+
     val lines = stream.flatMap(_.value().split(","))
+    val line = lines.map(x => (x.split(" ")(0), x))
     // ip:127.0.0.1
     // user-identifier:UD11
     // name:frank
