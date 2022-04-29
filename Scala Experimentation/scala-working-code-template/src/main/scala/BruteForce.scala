@@ -10,6 +10,8 @@ import org.apache.spark.streaming.kafka010._
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 
+import scala.collection.convert.ImplicitConversions.`collection asJava`
+
 
 object SQLi {
 
@@ -51,8 +53,10 @@ object SQLi {
     // RDD[String] = ssc.sparkContext.emptyRDD[(String)]
 
 
-    val lines = stream.flatMap(_.value().split(","))
-    // ip:127.0.0.1
+    val lines = stream.flatMap(_.value().split("\n"))
+
+
+    // ip:127.0.0.1,
     // user-identifier:UD11
     // name:frank
     // time-stamp:[10/Oct/2000:13:55:36 -0700]
@@ -61,10 +65,28 @@ object SQLi {
 
     lines.foreachRDD { rdd =>
 
-      val line = rdd.map(x => (x.split(" ")(0), x)).collect()
+      //val line = rdd.map(x => (x.split(" ")(0), x)).collect()
+      val line = rdd.map(x => (x.split(", ")(0), x.split(", ")(4)))
 
-      for (c <- line) {
-        println(c)
+      //val mapped = line.combineByKey(_=> ", " , (a: String, _)=> a + ", ", (a: String, v: String) => a + v).collect()
+      val mapped = line.groupByKey()
+
+
+
+        val payload = mapped.filter(x => x._2.contains("header:"))
+
+        var contains = payload.filter(x => x._2.contains("select"))
+
+        for (pl <- SQLi_payload_list){
+          contains = payload.filter(x => x._2.contains(pl)).union(contains)
+        }
+        //val ip = contains.filter(x => SQLi_payload_list.contains(x))
+        //val collected = contains.map(record => (record, 1))
+        //val counts = collected.reduceByKey((x, y) => x + y).collect()
+        val finalRDD = contains.collect()
+
+      for (c <- finalRDD) {
+        println(c._1 + " Suspicious Behavior [SQLi Attempt]")
       }
     }
 
