@@ -1,23 +1,19 @@
-import org.apache.spark.{SparkConf, SparkContext, rdd}
+import org.apache.spark.{SparkConf}
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.common.serialization.StringDeserializer
-import org.apache.spark
-import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.SparkSession
-import org.apache.spark.streaming.dstream.DStream
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.kafka010._
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 
-
-object XSS {
+object XSS{
 
   def main(args: Array[String]) {
 
     val conf = new SparkConf().setAppName("xss-payload-detection")
-    val ssc = new StreamingContext(conf, Seconds(10))
-    val xss_payload_list: List[String] = List("<image", "<audio", "<video",
+    val ssc = new StreamingContext(conf, Seconds(20))
+
+    val xss_payload_list: List[String] = List("<img", "<image", "<audio", "<video",
       "<body", "<object",  "<script",  "<svg",  "<title",  "<iframe",  "<frameset",
       "<html",  "<bgsound",  "<style",  "<applet",  "<marquee",  "<xml",  "--><!--",
       "<!--\\x3E<img",  "`/\"'><img",  "<a",  "<script>/*",  "\"'`>ABC<div",  "ABC<div",
@@ -47,32 +43,27 @@ object XSS {
       Subscribe[String, String](topics, kafkaParams)
     )
 
-    // Print as Raw Input
+    // Debug Print
     stream.map(record => (record.value().toString)).print
-    // RDD[String] = ssc.sparkContext.emptyRDD[(String)]
-    val lines = stream.flatMap(_.value().split(","))
-    // ip:127.0.0.1
-    // user-identifier:UD11
-    // name:frank
-    // time-stamp:[10/Oct/2000:13:55:36 -0700]
-    // header:"POST /?id=1' or '1' = '1'&password=message2 HTTP/1.0"
-    // status:200
+
+    //Seperate Lines
+    val lines = stream.flatMap(_.value().split("\n"))
+
+    //Template of Each Line
+    // ip:127.0.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"POST /?id=1' or '1' = '1'&password=message2 HTTP/1.0", status:200
 
     lines.foreachRDD { rdd =>
-      val payload = rdd.filter(_.contains("header:"))
-
-      var contains = payload.filter(_.contains("<img"))
-
-      for (pl <- xss_payload_list){
-        contains = payload.filter(_.contains(pl)).union(contains)
-      }
-      //val ip = contains.filter(x => SQLi_payload_list.contains(x))
-      val collected = contains.map(record => (record, 1))
-      val counts = collected.reduceByKey((x, y) => x + y).collect()
-      //val collected = rdd.map(record => ( record.key(), record.value() )).collect()
-      for (c <- counts) {
-        println(c + "Is Query")
-
+      //Map Ip with Header
+      val line = rdd.map(x => (x.split(", ")(0), x.split(", ")(4)))
+      //Concat all headers with same IP
+      val mapped = line.reduceByKey((x, y) => x+", "+y)
+      //Filters header with signature collection
+      val contains = mapped.filter(x => {xss_payload_list.exists(y => {x._2.contains(y)})})
+      //Collection Step
+      val finalRDD = contains.collect()
+      //Print out IPs with headers that have signature overlap
+      for (c <- finalRDD) {
+        println(c._1 + " Suspicious Behavior [XSS Attempt]" )
       }
     }
 
@@ -81,7 +72,6 @@ object XSS {
     println("StreamingWordCount: await termination")
     stream.context.awaitTermination()
     println("StreamingWordCount: done!")
-
 
   }
 }

@@ -1,4 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\scala-working-code\src\main\scala\HelloWorld.scala:46:17: value foreach is not a member of org.apache.spark.streaming.dstream.DStream[(String, Int)][0m
-[0m[[0m[31merror[0m] [0m[0m      for (c <- collected) {[0m
-[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\Scala Experimentation\scala-working-code-template\src\main\scala\BruteForce.scala:87:41: not enough arguments for method collect: (pf: PartialFunction[(String, String),B])(implicit bf: scala.collection.generic.CanBuildFrom[Array[(String, String)],B,That])That.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter pf.[0m
+[0m[[0m[31merror[0m] [0m[0m        val finalRDD = contains1.collect()[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

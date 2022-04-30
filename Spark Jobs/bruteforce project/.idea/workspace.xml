@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec401fb5-0f5d-4e56-980d-61de9bd82390" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../xss scala list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../xss scala list.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/src/main/scala/BruteForce.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/src/main/scala/BruteForce.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/scala-2.12/bruteforce_2.12-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/scala-2.12/bruteforce_2.12-1.0.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/scala-2.12/classes/SQLi$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/scala-2.12/classes/SQLi$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/scala-2.12/zinc/inc_compile_2.12.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/scala-2.12/zinc/inc_compile_2.12.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/streams/compile/compile/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/streams/compile/compile/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/streams/compile/compileIncremental/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/streams/compile/compileIncremental/_global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/streams/compile/packageBin/_global/streams/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/streams/compile/packageBin/_global/streams/inputs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +85,9 @@
       <workItem from="1650786912328" duration="481000" />
       <workItem from="1651114661162" duration="2449000" />
       <workItem from="1651158156180" duration="812000" />
+      <workItem from="1651288416044" duration="10000" />
+      <workItem from="1651303158199" duration="1715000" />
+      <workItem from="1651304948216" duration="159000" />
     </task>
     <servers />
   </component>

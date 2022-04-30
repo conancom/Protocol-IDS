@@ -1,9 +1,6 @@
-import org.apache.spark.{SparkConf, SparkContext, rdd}
+import org.apache.spark.{SparkConf}
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.common.serialization.StringDeserializer
-import org.apache.spark
-import org.apache.spark.sql.SparkSession
-import org.apache.spark.streaming.dstream.DStream
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.kafka010._
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
@@ -14,13 +11,11 @@ object BruteForce {
 
   def main(args: Array[String]) {
 
-    val conf = new SparkConf().setAppName("brute-force")
-    val ssc = new StreamingContext(conf, Seconds(10))
-    var requestsPerSecUser: Int = args(0).toInt;
-
-    if (requestsPerSecUser == 0){
-      requestsPerSecUser = 10
-    }
+    val timeInSeconds: Int = 10;
+    val requestsPerSecUser: Int = 10;
+    val requestsPerCurr: Int = requestsPerSecUser * timeInSeconds
+    val conf = new SparkConf().setAppName("brute-force-detection")
+    val ssc = new StreamingContext(conf, Seconds(timeInSeconds))
 
 
     val kafkaParams = Map[String, Object](
@@ -41,19 +36,21 @@ object BruteForce {
 
     // Print as Raw Input
     stream.map(record=>(record.value().toString)).print
-
-    val lines = stream.flatMap(_.value().split(","))
+    //Split By comma
+    val lines = stream.flatMap(_.value().split(", "))
 
     lines.foreachRDD { rdd =>
-      //
+      //Take only IP part
       val ip = rdd.filter(_.contains("ip"))
+      //Map each IP to 1
       val collected = ip.map(record => (record, 1))
-      val counts = collected.reduceByKey((x, y) => x + y).collect()
-      //val collected = rdd.map(record => ( record.key(), record.value() )).collect()
-      for (c <- counts) {
-        if (c._2 > 5 ) {
-          println(c + " Alert, might be Brute Forcing")
-        }
+      //Reduce IPs to count each IP address's frequency
+      val counts = collected.reduceByKey((x, y) => x + y)
+      //Filter to take only Number of IPs in Threshold
+      val countFinal = counts.filter(x => x._2>requestsPerCurr).collect()
+      //Print
+      for (c <- countFinal) {
+          println(c._1 + " Suspicious Behavior [Brute Force Attempt]" )
       }
     }
 

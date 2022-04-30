@@ -1,24 +1,18 @@
-import org.apache.spark.{SparkConf, SparkContext, rdd}
+import org.apache.spark.{SparkConf}
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.common.serialization.StringDeserializer
-import org.apache.spark
-import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.SparkSession
-import org.apache.spark.streaming.dstream.DStream
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.kafka010._
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
-
-import scala.collection.convert.ImplicitConversions.`collection asJava`
-
 
 object SQLi {
 
   def main(args: Array[String]) {
 
     val conf = new SparkConf().setAppName("sqli-payload-detection")
-    val ssc = new StreamingContext(conf, Seconds(10))
+    val ssc = new StreamingContext(conf, Seconds(20))
+
     val SQLi_payload_list: List[String] = List ("char","int","distinct","cast","union","column","column_name",
       "table","table_name","table_schema","concat","convert","benchmark","count","generate_series","information_schema",
       "schemata","ctxsys","drithsx","sn","login_test","tb_login","iif","ord","mid","make_set","json_keys","elt","sleep",
@@ -30,7 +24,6 @@ object SQLi {
       "YFJq","bpul","oYfK","EcoY","MMjX","lPcI","tZjB","EKWp","SjoD","itwk","fRLP","dMoi","hqAi","Coax","uPqw","zvVc",
       "VuGr","RsCt","VBDT","QoSP","NKWH","pBVS","mMBU","fQZL","lLXh","kKQQ","%","=","(",")","\\","#","+", "or", "||",
       "1=1","AND","OR","'","-","<",">","*");
-
 
     val kafkaParams = Map[String, Object](
       "bootstrap.servers" -> "10.148.0.5:9092",
@@ -48,45 +41,27 @@ object SQLi {
       Subscribe[String, String](topics, kafkaParams)
     )
 
-    // Print as Raw Input
+    // Debug Print
     stream.map(record => (record.value().toString)).print
-    // RDD[String] = ssc.sparkContext.emptyRDD[(String)]
 
-
+    //Seperate Lines
     val lines = stream.flatMap(_.value().split("\n"))
 
-
-    // ip:127.0.0.1,
-    // user-identifier:UD11
-    // name:frank
-    // time-stamp:[10/Oct/2000:13:55:36 -0700]
-    // header:"POST /?id=1' or '1' = '1'&password=message2 HTTP/1.0"
-    // status:200
+    //Template of Each Line
+    // ip:127.0.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"POST /?id=1' or '1' = '1'&password=message2 HTTP/1.0", status:200
 
     lines.foreachRDD { rdd =>
-
-      //val line = rdd.map(x => (x.split(" ")(0), x)).collect()
+      //Map Ip with Header
       val line = rdd.map(x => (x.split(", ")(0), x.split(", ")(4)))
-
-      //val mapped = line.combineByKey(_=> ", " , (a: String, _)=> a + ", ", (a: String, v: String) => a + v).collect()
-      val mapped = line.groupByKey()
-
-
-
-        val payload = mapped.filter(x => x._2.contains("header:"))
-
-        var contains = payload.filter(x => x._2.contains("select"))
-
-        for (pl <- SQLi_payload_list){
-          contains = payload.filter(x => x._2.contains(pl)).union(contains)
-        }
-        //val ip = contains.filter(x => SQLi_payload_list.contains(x))
-        //val collected = contains.map(record => (record, 1))
-        //val counts = collected.reduceByKey((x, y) => x + y).collect()
-        val finalRDD = contains.collect()
-
+      //Concat all headers with same IP
+      val mapped = line.reduceByKey((x, y) => x+", "+y)
+      //Filters header with signature collection
+      val contains = mapped.filter(x => {SQLi_payload_list.exists(y => {x._2.contains(y)})})
+      //Collection Step
+      val finalRDD = contains.collect()
+      //Print out IPs with headers that have signature overlap
       for (c <- finalRDD) {
-        println(c._1 + " Suspicious Behavior [SQLi Attempt]")
+        println(c._1 + " Suspicious Behavior [SQLi Attempt]" )
       }
     }
 
