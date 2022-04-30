@@ -49,4 +49,12 @@ ip:128.5.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36
 ip:128.5.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"POST /?id=156498798469&password=message2 HTTP/1.0", status:200
 
 
-sudo bin/kafka-configs.sh --entity-type topics --alter --topic get --config retention.ms=1000 --bootstrap-server localhost:9092
+## For KNOT:
+
+ip:128.5.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"GET /?id=<img/src/onerror=prompt(8)>&password=message2 HTTP/1.0", status:200
+
+ip:128.5.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"POST /?id=<img/src/onerror=prompt(8)>&password=message2 HTTP/1.0", status:200
+
+ip:128.5.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"PUT HTTP/1.0", status:200
+
+ip:128.5.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"DELETE HTTP/1.0", status:200
