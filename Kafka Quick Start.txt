@@ -20,3 +20,6 @@ sudo bin/kafka-console-consumer.sh --topic get --from-beginning --bootstrap-serv
 ## Create Topic Event
 
 sudo bin/kafka-topics.sh --create --topic get --bootstrap-server localhost:9092
+
+## Delete Topic
+sudo bin/kafka-topics.sh localhost:2181 --delete --topic get --bootstrap-server localhost:9092
