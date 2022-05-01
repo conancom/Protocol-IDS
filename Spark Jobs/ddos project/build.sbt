@@ -18,7 +18,7 @@ libraryDependencies += "org.apache.spark" %% "spark-streaming" % "3.1.2" % "prov
 // https://mvnrepository.com/artifact/org.apache.spark/spark-sql
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.1.2" % "provided"
 libraryDependencies += "org.apache.spark" %% "spark-sql-kafka-0-10" % "3.1.2" % "provided"
-
+libraryDependencies += "com.vonage" % "client" % "6.2.0"
 
 
 

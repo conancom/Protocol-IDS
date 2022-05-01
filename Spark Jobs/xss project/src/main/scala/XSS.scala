@@ -1,15 +1,26 @@
-import org.apache.spark.{SparkConf}
+import org.apache.spark.SparkConf
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.kafka010._
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
+import com.vonage.client.VonageClient
+import com.vonage.client.sms.MessageStatus
+import com.vonage.client.sms.messages.TextMessage
+import java.sql.Timestamp
+import java.time.Instant
 
 object XSS{
 
   def main(args: Array[String]) {
 
+    //SMS Setup
+    val client = VonageClient.builder.apiKey("d05eb426").apiSecret("zBSv9seH5yDINPfu").build
+    val phoneNumber = "66800168998";
+    //Output Path from External Arg
+    val outputPath = args(0)
+    //Spark and Kafka Setup
     val conf = new SparkConf().setAppName("xss-payload-detection")
     val ssc = new StreamingContext(conf, Seconds(20))
 
@@ -63,8 +74,19 @@ object XSS{
       val finalRDD = contains.collect()
       //Print out IPs with headers that have signature overlap
       for (c <- finalRDD) {
-        println(c._1 + " Suspicious Behavior [XSS Attempt]" )
+        println(c._1 + " Suspicious Behavior [XSS Attempt]")
+
+        val messageBody = c._1 + " Suspicious Behavior [XSS Attempt] at " + Timestamp.from(Instant.now());
+
+        val message = new TextMessage("ProtocolIDS", phoneNumber, messageBody)
+
+        val response = client.getSmsClient.submitMessage(message)
+
+        if (response.getMessages.get(0).getStatus eq MessageStatus.OK) System.out.println("Message sent successfully.")
+
+        else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
       }
+      contains.saveAsTextFile(outputPath)
     }
 
     println("StreamingWordCount: streamingContext start")

@@ -1,15 +1,27 @@
-import org.apache.spark.{SparkConf}
+import org.apache.spark.SparkConf
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.kafka010._
 import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
 import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
+import com.vonage.client.VonageClient
+import com.vonage.client.sms.MessageStatus
+import com.vonage.client.sms.messages.TextMessage
+import java.sql.Timestamp
+import java.time.Instant
 
 
 object DDOS{
 
   def main(args: Array[String]) {
+
+    //SMS Setup
+    val client = VonageClient.builder.apiKey("d05eb426").apiSecret("zBSv9seH5yDINPfu").build
+    val phoneNumber = "66800168998";
+    //Output Path from External Arg
+    val outputPath = args(0)
+    //Spark and Kafka Setup
 
     val timeInSeconds: Int = 10;
     val requestsPerSecUser: Int = 10;
@@ -51,7 +63,18 @@ object DDOS{
       //Print
       for (c <- countFinal) {
         println(c._1 + " Suspicious Behavior [DDOS Attempt]" )
+
+        val messageBody = c._1 + " Suspicious Behavior [DDOS Attempt] at " + Timestamp.from(Instant.now());
+
+        val message = new TextMessage("ProtocolIDS", phoneNumber, messageBody)
+
+        val response = client.getSmsClient.submitMessage(message)
+
+        if (response.getMessages.get(0).getStatus eq MessageStatus.OK) System.out.println("Message sent successfully.")
+
+        else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
       }
+      counts.saveAsTextFile(outputPath)
     }
 
     println("StreamingWordCount: streamingContext start")

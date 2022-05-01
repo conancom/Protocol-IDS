@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec401fb5-0f5d-4e56-980d-61de9bd82390" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/src/main/scala/BruteForce.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/src/main/scala/BruteForce.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/scala-2.12/bruteforce_2.12-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/scala-2.12/bruteforce_2.12-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/scala-2.12/classes/SQLi$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/scala-2.12/classes/SQLi$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/scala-2.12/zinc/inc_compile_2.12.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/scala-2.12/zinc/inc_compile_2.12.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/streams/compile/compile/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/streams/compile/compile/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/streams/compile/compileIncremental/_global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/streams/compile/compileIncremental/_global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/streams/compile/packageBin/_global/streams/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/../../Scala Experimentation/scala-working-code-template/target/streams/compile/packageBin/_global/streams/inputs" afterDir="false" />
-    </list>
+    <list default="true" id="ec401fb5-0f5d-4e56-980d-61de9bd82390" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +17,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="BruteForce" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -45,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ddos project" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -88,6 +97,7 @@
       <workItem from="1651288416044" duration="10000" />
       <workItem from="1651303158199" duration="1715000" />
       <workItem from="1651304948216" duration="159000" />
+      <workItem from="1651377378215" duration="718000" />
     </task>
     <servers />
   </component>

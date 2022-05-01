@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BruteForce-build.iml" filepath="$PROJECT_DIR$/.idea/modules/BruteForce-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DDOS.iml" filepath="$PROJECT_DIR$/.idea/modules/DDOS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DDOS-build.iml" filepath="$PROJECT_DIR$/.idea/modules/DDOS-build.iml" />
     </modules>
   </component>
 </project>
