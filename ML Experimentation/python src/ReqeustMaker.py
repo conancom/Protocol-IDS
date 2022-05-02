@@ -10290,16 +10290,15 @@ def ddosRequestMaker(users,minReqPerUser,maxReqPerUser, outputString):
                 random.randint(0, 255)) + ", name: " + random.choice(
                 names) + ", time-stamp: [10 / Oct / 2000:13: 55:36 - 0700]" + ", header: "+ random.choice(all_list) +" /?id=admin&password=" + random.choice(
                 password_list) + " HTTP/1.0" + ", status: 200\n"
-
     return outputString
 
 
 if __name__ == "__main__":
     f = open("demofile2.txt", "a")
     # out = sqliMaker(50, outputString)
-    #out = xssMaker(100, outputString)
+    out = xssMaker(20, outputString)
     #out = singleIPBruteForceMaker(200, outputString)
-    #out = normalRequestMaker(500, outputString)
-    out = ddosRequestMaker(5, 10, 15, outputString)
+    #out = normalRequestMaker(1250, outputString)
+    #out = ddosRequestMaker(5, 10, 15, outputString)
     f.write(out)
     f.close()

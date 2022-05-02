@@ -1,7 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\Spark Jobs\xss project\src\main\scala\XSS.scala:79:9: ')' expected but 'val' found.[0m
-[0m[[0m[31merror[0m] [0m[0m        val messageBody = c._1 + " Suspicious Behavior [XSS Attempt]";[0m
-[0m[[0m[31merror[0m] [0m[0m        ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Leon\Documents\University\Semester 2 2021\CSS454 Network Security\Project\Protocol-IDS\Spark Jobs\xss project\src\main\scala\XSS.scala:83:9: ';' expected but 'val' found.[0m
-[0m[[0m[31merror[0m] [0m[0m        val response = client.getSmsClient.submitMessage(message)[0m
-[0m[[0m[31merror[0m] [0m[0m        ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0mone deprecation (since 2.0.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
