@@ -38,6 +38,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/scala/BruteForce.scala" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/build.sbt" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -54,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ddos project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sqli project" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -98,6 +102,8 @@
       <workItem from="1651303158199" duration="1715000" />
       <workItem from="1651304948216" duration="159000" />
       <workItem from="1651377378215" duration="718000" />
+      <workItem from="1651506971783" duration="467000" />
+      <workItem from="1651561753983" duration="2721000" />
     </task>
     <servers />
   </component>

@@ -18,7 +18,7 @@ object DDOS{
 
     //SMS Setup
     val client = VonageClient.builder.apiKey("d05eb426").apiSecret("zBSv9seH5yDINPfu").build
-    val phoneNumber = "66800168998";
+    val phoneNumber = "66824345775";
     //Output Path from External Arg
     val outputPath = args(0)
     //Spark and Kafka Setup
@@ -59,13 +59,15 @@ object DDOS{
       //Reduce IPs to count each IP address's frequency
       val counts = collected.reduceByKey((x, y) => x + y)
       //Filter to take only Number of IPs in Threshold
-      val countFinal = counts.filter(x => x._2>requestsPerCurr).collect()
+      val countFinal = counts.filter(x => x._2>requestsPerCurr)
+
+      val countCollected = countFinal.collect()
       //Print
-      for (c <- countFinal) {
+      for (c <- countCollected) {
         println(c._1 + " Suspicious Behavior [DDOS Attempt]" )
 
         val messageBody = c._1 + " Suspicious Behavior [DDOS Attempt] at " + Timestamp.from(Instant.now());
-
+/*
         val message = new TextMessage("ProtocolIDS", phoneNumber, messageBody)
 
         val response = client.getSmsClient.submitMessage(message)
@@ -73,8 +75,13 @@ object DDOS{
         if (response.getMessages.get(0).getStatus eq MessageStatus.OK) System.out.println("Message sent successfully.")
 
         else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
+*/
+
       }
-      counts.saveAsTextFile(outputPath)
+      if (!countFinal.isEmpty()) {
+        countFinal.saveAsTextFile(outputPath + "ddos-activity/" + Timestamp.from(Instant.now()).toString + "/")
+      }
+
     }
 
     println("StreamingWordCount: streamingContext start")

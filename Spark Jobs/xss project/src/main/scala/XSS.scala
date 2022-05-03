@@ -8,7 +8,6 @@ import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 import com.vonage.client.VonageClient
 import com.vonage.client.sms.MessageStatus
 import com.vonage.client.sms.messages.TextMessage
-import org.apache.spark.sql._
 import java.sql.Timestamp
 import java.time.Instant
 
@@ -18,7 +17,7 @@ object XSS{
 
     //SMS Setup
     val client = VonageClient.builder.apiKey("d05eb426").apiSecret("zBSv9seH5yDINPfu").build
-    val phoneNumber = "66800168998";
+    val phoneNumber = "66824345775";
     //Output Path from External Arg
     val outputPath = args(0)
     //Spark and Kafka Setup
@@ -80,25 +79,24 @@ object XSS{
         val messageBody = c._1 + " Suspicious Behavior [XSS Attempt] at " + Timestamp.from(Instant.now());
 
         val message = new TextMessage("ProtocolIDS", phoneNumber, messageBody)
-        /*
+
+
+
         val response = client.getSmsClient.submitMessage(message)
 
         if (response.getMessages.get(0).getStatus eq MessageStatus.OK) System.out.println("Message sent successfully.")
 
         else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
-        */
+
 
       }
 
-      val sqlContext = new SQLContext(ssc.sparkContext)
-      import sqlContext.implicits._
 
       if (!contains.isEmpty()) {
-        //contains.toDF().coalesce(1).write.mode(SaveMode.Append).save(outputPath)
-        // rdd.saveAsTextFile("C:/data/spark/")
-        contains.saveAsTextFile(outputPath + Timestamp.from(Instant.now()).toString + "/")
+
+        contains.saveAsTextFile(outputPath + "xss-activity/" + Timestamp.from(Instant.now()).toString + "/")
       }
-      //contains.saveAsTextFile(outputPath)
+
     }
 
     println("StreamingWordCount: streamingContext start")

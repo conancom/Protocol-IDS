@@ -10294,11 +10294,12 @@ def ddosRequestMaker(users,minReqPerUser,maxReqPerUser, outputString):
 
 
 if __name__ == "__main__":
-    f = open("demofile2.txt", "a")
-    # out = sqliMaker(50, outputString)
-    out = xssMaker(20, outputString)
-    #out = singleIPBruteForceMaker(200, outputString)
-    #out = normalRequestMaker(1250, outputString)
-    #out = ddosRequestMaker(5, 10, 15, outputString)
+    f = open("xss.txt", "a")
+
+    #out = sqliMaker(20, outputString)
+    #out = xssMaker(20, outputString)
+    #out = singleIPBruteForceMaker(300, outputString)
+    out = normalRequestMaker(9980, outputString)
+    #out = ddosRequestMaker(3, 150, 2500, outputString)
     f.write(out)
     f.close()

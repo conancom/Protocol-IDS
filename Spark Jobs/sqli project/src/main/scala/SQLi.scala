@@ -17,25 +17,19 @@ object SQLi {
 
     //SMS Setup
     val client = VonageClient.builder.apiKey("d05eb426").apiSecret("zBSv9seH5yDINPfu").build
-    val phoneNumber = "66800168998";
+    val phoneNumber = "66824345775";
     //Output Path from External Arg
     val outputPath = args(0)
     //Spark and Kafka Setup
     val conf = new SparkConf().setAppName("sqli-payload-detection")
     val ssc = new StreamingContext(conf, Seconds(20))
 
-    val SQLi_payload_list: List[String] = List ("char","int","distinct","cast","union","column","column_name",
+    val SQLi_payload_list: List[String] = List ("char ","int ","distinct","cast(","union","column","column_name",
       "table","table_name","table_schema","concat","convert","benchmark","count","generate_series","information_schema",
-      "schemata","ctxsys","drithsx","sn","login_test","tb_login","iif","ord","mid","make_set","json_keys","elt","sleep",
-      "procedure","analyse","extractvalue","MD5","null","WMlF","axUU","pLQD","VzxF","COIj","hOre","BPiw","yFlw","JVvY",
-      "dZkl","RjPx","CENp","xwDm","vjdV","cNbH","SFyR","aTVH","ZsKF","CyJp","rZMF","cUjj","EUxQ","LCju","kuta","XZeD",
-      "hAqN","CpcV","PoLE","VFvf","Obus","ekYn","yJsI","DmJo","QRPk","hDNb","GArX","jTQx","gmvs","NZwC","JUku","UOXN",
-      "CFqL","akSy","UGlQ","XEqz","Kflk","szIf","pCpU","wjwv","brAJ","kdZk","qovn","qajJ","Vdgm","dCgi","jSJQ","weOs",
-      "FGfr","SVtI","putE","pPdn","cBRe","NClW","Cyed","WFDK","rsAn","ryFD","FUoB","xDQE","JEnX","nlZq","Grvx","rSth",
-      "YFJq","bpul","oYfK","EcoY","MMjX","lPcI","tZjB","EKWp","SjoD","itwk","fRLP","dMoi","hqAi","Coax","uPqw","zvVc",
-      "VuGr","RsCt","VBDT","QoSP","NKWH","pBVS","mMBU","fQZL","lLXh","kKQQ","%","=","(",")","\\","#","+", "or", "||",
-      "1=1","AND","OR","'","-","<",">","*");
-
+      "schemata","login_test","tb_login","iif","mid","make_set","json_keys","elt","sleep",
+      "procedure","analyse","extractvalue","MD5","null","%","(",")","\\","#","+", " or ", "||",
+      "1=1"," AND "," OR ","- ","<",">","*");
+    // ip:127.0.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"POST /?id=1' or '1' = '1'&password=message2 HTTP/1.0", status:200
     val kafkaParams = Map[String, Object](
       "bootstrap.servers" -> "10.148.0.5:9092",
       "key.deserializer" -> classOf[StringDeserializer],
@@ -83,8 +77,13 @@ object SQLi {
         if (response.getMessages.get(0).getStatus eq MessageStatus.OK) System.out.println("Message sent successfully.")
 
         else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
+
+
+
       }
-      contains.saveAsTextFile(outputPath)
+      if (!contains.isEmpty()) {
+        contains.saveAsTextFile(outputPath + "sqli-activity/" + Timestamp.from(Instant.now()).toString + "/")
+      }
     }
 
     println("StreamingWordCount: streamingContext start")
