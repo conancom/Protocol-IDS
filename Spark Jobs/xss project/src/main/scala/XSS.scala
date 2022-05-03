@@ -24,19 +24,24 @@ object XSS{
     val conf = new SparkConf().setAppName("xss-payload-detection")
     val ssc = new StreamingContext(conf, Seconds(20))
 
-    val xss_payload_list: List[String] = List("<img", "<image", "<audio", "<video",
-      "<body", "<object",  "<script",  "<svg",  "<title",  "<iframe",  "<frameset",
-      "<html",  "<bgsound",  "<style",  "<applet",  "<marquee",  "<xml",  "--><!--",
-      "<!--\\x3E<img",  "`/\"'><img",  "<a",  "<script>/*",  "\"'`>ABC<div",  "ABC<div",
-      "<input",  "<form",  "<math",  "<table",  "<li", "<embed", "<b", "<div", "<x",
-      "<!", "<?", "</", "<%", "<link", "<style>@import", "<//", "<meta",
-      "<vmlframe", "<event-source", "<FRAMESET><FRAME", "<BR", "<LAYER", "<XSS",
+    val xss_payload_list: List[String] = List("<img", "img>", "<image", "image>", "<audio", "audio>",
+      "<video", "video>", "<body", "body>", "<object", "object>",  "<script", "script>", "<svg", "svg>",
+      "<title", "title>", "<iframe", "iframe>", "<frameset", "frameset>", "<html", "html>", "<bgsound",
+      "<style", "style>", "<applet", "applet>", "<marquee", "marquee>", "<xml", "xml>",  "--><!--",
+      "<!--\\x3E<img",  "`/\"'><img", "<a", "</a", "<script>/*",  "\"'`>ABC<div",  "ABC<div",
+      "<input", "input>", "<form", "form>", "<math", "math>", "<table", "table>", "<li", "li>", "<embed",
+      "embed>", "<b", "<div", "div>", "<x",
+      "<!", "<?", "</", "<%", "<link", "link>", "<style>@import", "<//", "<meta", "meta>",
+      "<vmlframe", "<event-source", "<FRAMESET><FRAME", "<BR", "BR>", "<LAYER", "LAYER>", "<XSS", "XSS>",
       "<STYLE>li", "<!--[if", "<BASE", "<P", "<?xml", "<SCRIPT/XSS", "<form><textarea",
-      "<var", "<TD", "&lt;DIV", "<;IMG", "<;SCRIPT", "<;BASE", "<;STYLE",
+      "<var", "var>", "<TD", "TD>", "&lt;DIV", "<;IMG", "<;SCRIPT", "<;BASE", "<;STYLE",
       "<;DIV", "<;HTML", "<;BODY", "<;BGSOUND", "<;IFRAME", "<;INPUT", "<;TABLE", "<;XML", "<;?",
       "<;BR", "<;XSS", "<;META", "<;A", "\"-prompt(8)-\"", "'-prompt(8)-'", "\";a=prompt,a()//",
-      "';a=prompt,a()//", "'-eval", "\"-eval", "\"onclick=prompt(8)", "script>", "script%",
-      "src=xxx:x", "&lt;", "XSS", "xss", "&#x", "(88,83,83)");
+      "';a=prompt,a()//", "'-eval", "\"-eval", "\"onclick=prompt(8)", "script%",
+      "src=xxx:x", "&lt;", "XSS", "xss", "&#x", "(88,83,83)", "<menu ", "menu>",
+      "‘; alert(1);", "‘)alert(1);//", "<keygen ","keygen>", "alert(",
+      "a=\\\"get\\\";", "b=\\\"URL(\\\\\"\\\";", "c=\\\"javascript&#058;\\\""
+    )
 
     val kafkaParams = Map[String, Object](
       "bootstrap.servers" -> "10.148.0.5:9092",
@@ -77,7 +82,7 @@ object XSS{
         println(c._1 + " Suspicious Behavior [XSS Attempt]")
 
         val messageBody = c._1 + " Suspicious Behavior [XSS Attempt] at " + Timestamp.from(Instant.now());
-
+/*
         val message = new TextMessage("ProtocolIDS", phoneNumber, messageBody)
 
 
@@ -88,6 +93,8 @@ object XSS{
 
         else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
 
+
+ */
 
       }
 
