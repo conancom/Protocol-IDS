@@ -12,8 +12,8 @@ val xss_payload_list: List[String] = List("<img", "img>", "<image", "image>", "<
  "<;DIV", "<;HTML", "<;BODY", "<;BGSOUND", "<;IFRAME", "<;INPUT", "<;TABLE", "<;XML", "<;?",
  "<;BR", "<;XSS", "<;META", "<;A", "\"-prompt(8)-\"", "'-prompt(8)-'", "\";a=prompt,a()//",
  "';a=prompt,a()//", "'-eval", "\"-eval", "\"onclick=prompt(8)", "script%",
- "src=xxx:x", "&lt;", "XSS", "xss", "&#x", "(88,83,83)",
- "‘; alert(1);", "‘)alert(1);//",
+ "src=xxx:x", "&lt;", "XSS", "xss", "&#x", "(88,83,83)", "<menu ", "menu>",
+ "‘; alert(1);", "‘)alert(1);//", "<keygen ","keygen>", "alert(",
  "a=\\\"get\\\";", "b=\\\"URL(\\\\\"\\\";", "c=\\\"javascript&#058;\\\"";
 
 );
