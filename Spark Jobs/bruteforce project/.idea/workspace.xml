@@ -58,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sqli project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -104,6 +104,8 @@
       <workItem from="1651377378215" duration="718000" />
       <workItem from="1651506971783" duration="467000" />
       <workItem from="1651561753983" duration="2721000" />
+      <workItem from="1651627289934" duration="5000" />
+      <workItem from="1651628432268" duration="598000" />
     </task>
     <servers />
   </component>

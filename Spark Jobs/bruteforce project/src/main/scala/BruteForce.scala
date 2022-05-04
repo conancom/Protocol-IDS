@@ -19,7 +19,7 @@ object BruteForce {
 
     //SMS Setup
     val client = VonageClient.builder.apiKey("d05eb426").apiSecret("zBSv9seH5yDINPfu").build
-    val phoneNumber = "66824345775";
+    val phoneNumber = "66819851798";
     //Output Path from External Arg
     val outputPath = args(0)
     //Spark and Kafka Setup

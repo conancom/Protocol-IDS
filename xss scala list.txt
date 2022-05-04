@@ -18,7 +18,11 @@ val xss_payload_list: List[String] = List("<img", "img>", "<image", "image>", "<
 
 );
 
-gcloud dataproc jobs submit spark --jar=gs://protocol-ids-spark-jobs/xss_2.12-1.0.0.jar --cluster=cluster-protocol-ids --properties=^#^spark.jars.packages=org.apache.spark:spark-streaming-kafka-0-10_2.12:3.1.2,com.vonage:client:6.2.0 --region=asia-southeast2 -- gs://protocol-ids-output/output-logs/
+
+
+gcloud dataproc jobs submit spark --jar=gs://protocol-ids-spark-jobs/bruteforce_2.12_demo-1.0.0.jar --cluster=cluster-protocol-ids --properties=^#^spark.jars.packages=org.apache.spark:spark-streaming-kafka-0-10_2.12:3.1.2,com.vonage:client:6.2.0 --region=asia-southeast2 -- gs://protocol-ids-output/output-logs/
+
+gcloud dataproc jobs submit spark --jar=gs://protocol-ids-spark-jobs/xss_2.12_demo-1.0.0.jar --cluster=cluster-protocol-ids --properties=^#^spark.jars.packages=org.apache.spark:spark-streaming-kafka-0-10_2.12:3.1.2,com.vonage:client:6.2.0 --region=asia-southeast2 -- gs://protocol-ids-output/output-logs/
 
 ip:128.5.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"POST /?id=<img/src/onerror=prompt(8)>&password=message2 HTTP/1.0", status:200
 ip:128.5.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"POST /?id=<img/src/onerror=prompt(8)>&password=message2 HTTP/1.0", status:200
@@ -39,7 +43,7 @@ ip:128.5.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36
 
 gcloud dataproc jobs submit spark --jar=gs://example-bucket-visor/bruteforce_2.12-1.0.0.jar --cluster=cluster-protocol-ids --properties spark.jars.packages=org.apache.spark:spark-streaming-kafka-0-10_2.12:3.1.2 --region=asia-southeast2
 
-
+Could you elaborate the password hashing again and how it is compared afterwards ?
 
 ip:128.5.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"POST /?id=156498798469&password=message2 HTTP/1.0", status:200
 ip:128.5.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"POST /?id=156498798469&password=message2 HTTP/1.0", status:200

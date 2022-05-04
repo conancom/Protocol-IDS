@@ -17,7 +17,7 @@ object XSS{
 
     //SMS Setup
     val client = VonageClient.builder.apiKey("d05eb426").apiSecret("zBSv9seH5yDINPfu").build
-    val phoneNumber = "66824345775";
+    val phoneNumber = "66819851798";
     //Output Path from External Arg
     val outputPath = args(0)
     //Spark and Kafka Setup
@@ -82,7 +82,7 @@ object XSS{
         println(c._1 + " Suspicious Behavior [XSS Attempt]")
 
         val messageBody = c._1 + " Suspicious Behavior [XSS Attempt] at " + Timestamp.from(Instant.now());
-/*
+
         val message = new TextMessage("ProtocolIDS", phoneNumber, messageBody)
 
 
@@ -94,7 +94,7 @@ object XSS{
         else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
 
 
- */
+
 
       }
 
