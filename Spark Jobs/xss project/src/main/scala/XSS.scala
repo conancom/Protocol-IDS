@@ -8,6 +8,8 @@ import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 import com.vonage.client.VonageClient
 import com.vonage.client.sms.MessageStatus
 import com.vonage.client.sms.messages.TextMessage
+import org.apache.spark.streaming.scheduler.{StreamingListener, StreamingListenerBatchCompleted}
+
 import java.sql.Timestamp
 import java.time.Instant
 
@@ -22,7 +24,7 @@ object XSS{
     val outputPath = args(0)
     //Spark and Kafka Setup
     val conf = new SparkConf().setAppName("xss-payload-detection")
-    val ssc = new StreamingContext(conf, Seconds(20))
+    val ssc = new StreamingContext(conf, Seconds(30))
 
     val xss_payload_list: List[String] = List("<img", "img>", "<image", "image>", "<audio", "audio>",
       "<video", "video>", "<body", "body>", "<object", "object>",  "<script", "script>", "<svg", "svg>",
@@ -49,7 +51,8 @@ object XSS{
       "value.deserializer" -> classOf[StringDeserializer],
       "group.id" -> "get-post",
       "auto.offset.reset" -> "latest",
-      "enable.auto.commit" -> (false: java.lang.Boolean)
+      "enable.auto.commit" -> (false: java.lang.Boolean),
+      "maxRatePerPartition" -> new Integer(600000)
     )
 
     val topics = Array("get", "post")
@@ -77,12 +80,13 @@ object XSS{
       val contains = mapped.filter(x => {xss_payload_list.exists(y => {x._2.contains(y)})})
       //Collection Step
       val finalRDD = contains.collect()
+      ssc.addStreamingListener(new MyListener())
       //Print out IPs with headers that have signature overlap
       for (c <- finalRDD) {
         println(c._1 + " Suspicious Behavior [XSS Attempt]")
 
         val messageBody = c._1 + " Suspicious Behavior [XSS Attempt] at " + Timestamp.from(Instant.now());
-
+/*
         val message = new TextMessage("ProtocolIDS", phoneNumber, messageBody)
 
 
@@ -92,7 +96,7 @@ object XSS{
         if (response.getMessages.get(0).getStatus eq MessageStatus.OK) System.out.println("Message sent successfully.")
 
         else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
-
+*/
 
 
 
@@ -112,5 +116,12 @@ object XSS{
     stream.context.awaitTermination()
     println("StreamingWordCount: done!")
 
+  }
+  class MyListener() extends StreamingListener {
+    override def onBatchCompleted(batchStarted: StreamingListenerBatchCompleted) {
+      println("Total delay: " + batchStarted.batchInfo.totalDelay)
+      println("Processing time : " + batchStarted.batchInfo.processingDelay)
+      println("Scheduling Delay : " + batchStarted.batchInfo.schedulingDelay)
+    }
   }
 }

@@ -41,7 +41,7 @@ object BruteForce {
       "group.id" -> "get",
       "auto.offset.reset" -> "latest",
       "enable.auto.commit" -> (false: java.lang.Boolean),
-      "maxRatePerPartition" -> new Integer(100000)
+      "maxRatePerPartition" -> new Integer(600000)
     )
 
     val topics = Array("get")
@@ -53,16 +53,12 @@ object BruteForce {
 
     // Print as Raw Input
     stream.map(record=>(record.value().toString)).print
-
-    val t1 = System.nanoTime()
     //Split By comma
-    val lines = stream.flatMap(_.value().split(", "))
+    val lines = stream.flatMap(_.value().split("\n"))
 
     lines.foreachRDD { rdd =>
-      //Take only IP part
-      val ip = rdd.filter(_.contains("ip"))
       //Map each IP to 1
-      val collected = ip.map(record => (record, 1))
+      val collected = rdd.map(record => (record.split(", ")(0), 1))
       //Reduce IPs to count each IP address's frequency
       val counts = collected.reduceByKey((x, y) => x + y)
       //Filter to take only Number of IPs in Threshold
@@ -70,10 +66,8 @@ object BruteForce {
       val countFinal = counts.filter(x => x._2>requestsPerCurr)
 
       val countCollected = countFinal.collect()
-      val duration = (System.nanoTime() - t1)
 
       ssc.addStreamingListener(new MyListener())
-      println("Total time taken for task: " + duration)
       //Print
       for (c <- countCollected) {
           println(c._1 + " Suspicious Behavior [Brute Force Attempt]" )
@@ -92,8 +86,6 @@ object BruteForce {
       }
 
       if (!countFinal.isEmpty()) {
-
-
         countFinal.saveAsTextFile(outputPath + "brute-force-activity/" + Timestamp.from(Instant.now()).toString + "/")
       }
 

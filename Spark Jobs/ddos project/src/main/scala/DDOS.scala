@@ -8,6 +8,8 @@ import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 import com.vonage.client.VonageClient
 import com.vonage.client.sms.MessageStatus
 import com.vonage.client.sms.messages.TextMessage
+import org.apache.spark.streaming.scheduler.{StreamingListener, StreamingListenerBatchCompleted}
+
 import java.sql.Timestamp
 import java.time.Instant
 
@@ -23,8 +25,8 @@ object DDOS{
     val outputPath = args(0)
     //Spark and Kafka Setup
 
-    val timeInSeconds: Int = 10;
-    val requestsPerSecUser: Int = 10;
+    val timeInSeconds: Int = 30;
+    val requestsPerSecUser: Int = 3;
     val requestsPerCurr: Int = requestsPerSecUser * timeInSeconds
     val conf = new SparkConf().setAppName("ddos-detection")
     val ssc = new StreamingContext(conf, Seconds(timeInSeconds))
@@ -36,7 +38,8 @@ object DDOS{
       "value.deserializer" -> classOf[StringDeserializer],
       "group.id" -> "get",
       "auto.offset.reset" -> "latest",
-      "enable.auto.commit" -> (false: java.lang.Boolean)
+      "enable.auto.commit" -> (false: java.lang.Boolean),
+      "maxRatePerPartition" -> new Integer(600000)
     )
 
     val topics = Array("get","post","put","delete")
@@ -49,19 +52,18 @@ object DDOS{
     // Print as Raw Input
     stream.map(record=>(record.value().toString)).print
     //Split By comma
-    val lines = stream.flatMap(_.value().split(", "))
+    val lines = stream.flatMap(_.value().split("\n"))
 
     lines.foreachRDD { rdd =>
-      //Take only IP part
-      val ip = rdd.filter(_.contains("ip"))
       //Map each IP to 1
-      val collected = ip.map(record => (record, 1))
+      val collected = rdd.map(record => (record.split(", ")(0), 1))
       //Reduce IPs to count each IP address's frequency
       val counts = collected.reduceByKey((x, y) => x + y)
       //Filter to take only Number of IPs in Threshold
       val countFinal = counts.filter(x => x._2>requestsPerCurr)
 
       val countCollected = countFinal.collect()
+      ssc.addStreamingListener(new MyListener())
       //Print
       for (c <- countCollected) {
         println(c._1 + " Suspicious Behavior [DDOS Attempt]" )
@@ -90,5 +92,13 @@ object DDOS{
     stream.context.awaitTermination()
     println("StreamingWordCount: done!")
 
+  }
+
+  class MyListener() extends StreamingListener {
+    override def onBatchCompleted(batchStarted: StreamingListenerBatchCompleted) {
+      println("Total delay: " + batchStarted.batchInfo.totalDelay)
+      println("Processing time : " + batchStarted.batchInfo.processingDelay)
+      println("Scheduling Delay : " + batchStarted.batchInfo.schedulingDelay)
+    }
   }
 }
