@@ -8,6 +8,9 @@ import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
 import com.vonage.client.VonageClient
 import com.vonage.client.sms.MessageStatus
 import com.vonage.client.sms.messages.TextMessage
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.streaming.scheduler.{StreamingListener, StreamingListenerBatchCompleted}
+
 import java.sql.Timestamp
 import java.time.Instant
 
@@ -24,8 +27,8 @@ object BruteForce {
     val outputPath = args(0)
     //Spark and Kafka Setup
 
-    val timeInSeconds: Int = 10;
-    val requestsPerSecUser: Int = 10;
+    val timeInSeconds: Int = 30;
+    val requestsPerSecUser: Int = 3;
     val requestsPerCurr: Int = requestsPerSecUser * timeInSeconds
     val conf = new SparkConf().setAppName("brute-force-detection")
     val ssc = new StreamingContext(conf, Seconds(timeInSeconds))
@@ -37,7 +40,8 @@ object BruteForce {
       "value.deserializer" -> classOf[StringDeserializer],
       "group.id" -> "get",
       "auto.offset.reset" -> "latest",
-      "enable.auto.commit" -> (false: java.lang.Boolean)
+      "enable.auto.commit" -> (false: java.lang.Boolean),
+      "maxRatePerPartition" -> new Integer(100000)
     )
 
     val topics = Array("get")
@@ -49,6 +53,8 @@ object BruteForce {
 
     // Print as Raw Input
     stream.map(record=>(record.value().toString)).print
+
+    val t1 = System.nanoTime()
     //Split By comma
     val lines = stream.flatMap(_.value().split(", "))
 
@@ -64,12 +70,16 @@ object BruteForce {
       val countFinal = counts.filter(x => x._2>requestsPerCurr)
 
       val countCollected = countFinal.collect()
+      val duration = (System.nanoTime() - t1)
+
+      ssc.addStreamingListener(new MyListener())
+      println("Total time taken for task: " + duration)
       //Print
       for (c <- countCollected) {
           println(c._1 + " Suspicious Behavior [Brute Force Attempt]" )
 
           val messageBody = c._1 + " Suspicious Behavior [Brute Force Attempt] at " + Timestamp.from(Instant.now());
-
+    /*
           val message = new TextMessage("ProtocolIDS", phoneNumber, messageBody)
 
           val response = client.getSmsClient.submitMessage(message)
@@ -78,10 +88,11 @@ object BruteForce {
 
           else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
 
-
+*/
       }
 
       if (!countFinal.isEmpty()) {
+
 
         countFinal.saveAsTextFile(outputPath + "brute-force-activity/" + Timestamp.from(Instant.now()).toString + "/")
       }
@@ -94,5 +105,13 @@ object BruteForce {
     stream.context.awaitTermination()
     println("StreamingWordCount: done!")
 
+  }
+
+  class MyListener() extends StreamingListener {
+    override def onBatchCompleted(batchStarted: StreamingListenerBatchCompleted) {
+      println("Total delay: " + batchStarted.batchInfo.totalDelay)
+      println("Processing time : " + batchStarted.batchInfo.processingDelay)
+      println("Scheduling Delay : " + batchStarted.batchInfo.schedulingDelay)
+    }
   }
 }

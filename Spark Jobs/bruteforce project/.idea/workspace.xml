@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec401fb5-0f5d-4e56-980d-61de9bd82390" name="Changes" comment="" />
+    <list default="true" id="ec401fb5-0f5d-4e56-980d-61de9bd82390" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Protocol-IDS-IEEE-Report.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Protocol-IDS-IEEE-Report.docx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,6 +108,7 @@
       <workItem from="1651561753983" duration="2721000" />
       <workItem from="1651627289934" duration="5000" />
       <workItem from="1651628432268" duration="598000" />
+      <workItem from="1651803088402" duration="5248000" />
     </task>
     <servers />
   </component>
