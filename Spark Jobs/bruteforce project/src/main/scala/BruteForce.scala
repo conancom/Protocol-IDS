@@ -73,7 +73,7 @@ object BruteForce {
           println(c._1 + " Suspicious Behavior [Brute Force Attempt]" )
 
           val messageBody = c._1 + " Suspicious Behavior [Brute Force Attempt] at " + Timestamp.from(Instant.now());
-    /*
+    
           val message = new TextMessage("ProtocolIDS", phoneNumber, messageBody)
 
           val response = client.getSmsClient.submitMessage(message)
@@ -82,7 +82,7 @@ object BruteForce {
 
           else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
 
-*/
+
       }
 
       if (!countFinal.isEmpty()) {
