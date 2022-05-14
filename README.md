@@ -9,7 +9,10 @@ In this project we try to combine Apache Kafka and Apache Spark Streaming to ide
 
 This project is Protocol-based IDS on Cloud Environment [GCP] using Apache Kafka & Spark Streaming.</br>
 The Purpose is to detect Brute force attacks, DDoS attacks, SQL injection, and Cross-Site Scripting.</br>
-Each detected intrusion is logged into the protocol-ids-output bucket according to timestamp, and SMS notifications will also be sent to telephone numbers that have been set using the Vonage SMS API.
+Each detected intrusion is logged into the protocol-ids-output bucket according to timestamp, and SMS notifications will also be sent to telephone numbers that have been set using the Vonage SMS API.</br>
+</br>
+
+The Source Code for each Spark Job is written in Scala and can be modified in the corresponding Scala Folders in the Spark Jobs Folder.
 
 
 Stack used:
