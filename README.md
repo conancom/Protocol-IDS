@@ -12,7 +12,7 @@ The Purpose is to detect Brute force attacks, DDoS attacks, SQL injection, and C
 Each detected intrusion is logged into the protocol-ids-output bucket according to timestamp, and SMS notifications will also be sent to telephone numbers that have been set using the Vonage SMS API.</br>
 </br>
 
-The Source Code for each Spark Job is written in Scala and can be modified in the corresponding Scala Folders in the Spark Jobs Folder.
+The Source Code for each Spark Job is written in Scala and can be modified in the corresponding Scala Folders in the [Spark Jobs](https://github.com/conancom/Protocol-IDS/tree/main/Spark%20Jobs).
 
 
 Stack used:
