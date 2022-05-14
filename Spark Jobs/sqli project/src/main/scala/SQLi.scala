@@ -19,7 +19,7 @@ object SQLi {
 
     //SMS Setup
     val client = VonageClient.builder.apiKey("d05eb426").apiSecret("zBSv9seH5yDINPfu").build
-    val phoneNumber = "66824345775";
+    val phoneNumber = "66819851798";
     //Output Path from External Arg
     val outputPath = args(0)
     //Spark and Kafka Setup
@@ -73,7 +73,7 @@ object SQLi {
         println(c._1 + " Suspicious Behavior [SQLi Attempt]" )
 
         val messageBody = c._1 + " Suspicious Behavior [SQLi Attempt] at " + Timestamp.from(Instant.now());
-/*
+
         val message = new TextMessage("ProtocolIDS", phoneNumber, messageBody)
 
         val response = client.getSmsClient.submitMessage(message)
@@ -83,7 +83,7 @@ object SQLi {
         else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
 
 
-*/
+
       }
       if (!contains.isEmpty()) {
         contains.saveAsTextFile(outputPath + "sqli-activity/" + Timestamp.from(Instant.now()).toString + "/")
