@@ -18,8 +18,8 @@ object XSS{
   def main(args: Array[String]) {
 
     //SMS Setup
-    val client = VonageClient.builder.apiKey("d05eb426").apiSecret("zBSv9seH5yDINPfu").build
-    val phoneNumber = "66819851798";
+    val client = VonageClient.builder.apiKey("Your API key").apiSecret("Your API secret").build
+    val phoneNumber = "Your Telephone Number";
     //Output Path from External Arg
     val outputPath = args(0)
     //Spark and Kafka Setup
@@ -46,7 +46,7 @@ object XSS{
     )
 
     val kafkaParams = Map[String, Object](
-      "bootstrap.servers" -> "10.148.0.5:9092",
+      "bootstrap.servers" -> "Kafka Server IP and Port",
       "key.deserializer" -> classOf[StringDeserializer],
       "value.deserializer" -> classOf[StringDeserializer],
       "group.id" -> "get-post",
@@ -95,15 +95,12 @@ object XSS{
 
         else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
 
-
-
-
       }
 
 
       if (!contains.isEmpty()) {
 
-        contains.saveAsTextFile(outputPath + "xss-activity/" + Timestamp.from(Instant.now()).toString + "/")
+        contains.saveAsTextFile("Path to Bucket" + Timestamp.from(Instant.now()).toString + "/")
       }
 
     }
