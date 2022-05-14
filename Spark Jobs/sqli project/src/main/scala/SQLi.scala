@@ -18,8 +18,8 @@ object SQLi {
   def main(args: Array[String]) {
 
     //SMS Setup
-    val client = VonageClient.builder.apiKey("d05eb426").apiSecret("zBSv9seH5yDINPfu").build
-    val phoneNumber = "66819851798";
+    val client = VonageClient.builder.apiKey("Your API key").apiSecret("Your API secret").build
+    val phoneNumber = "Your Telephone Number";
     //Output Path from External Arg
     val outputPath = args(0)
     //Spark and Kafka Setup
@@ -33,7 +33,7 @@ object SQLi {
       "1=1"," AND "," OR ","- ","<",">","*");
     // ip:127.0.0.1, user-identifier:UD11, name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700], header:"POST /?id=1' or '1' = '1'&password=message2 HTTP/1.0", status:200
     val kafkaParams = Map[String, Object](
-      "bootstrap.servers" -> "10.148.0.5:9092",
+      "bootstrap.servers" -> "Kafka Server IP and Port",
       "key.deserializer" -> classOf[StringDeserializer],
       "value.deserializer" -> classOf[StringDeserializer],
       "group.id" -> "get-post",
@@ -83,10 +83,9 @@ object SQLi {
         else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
 
 
-
       }
       if (!contains.isEmpty()) {
-        contains.saveAsTextFile(outputPath + "sqli-activity/" + Timestamp.from(Instant.now()).toString + "/")
+        contains.saveAsTextFile("Path to Bucket" + Timestamp.from(Instant.now()).toString + "/")
       }
     }
 
