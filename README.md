@@ -7,6 +7,10 @@ In this project we try to combine Apache Kafka and Apache Spark Streaming to ide
 ![System diagram_0](https://user-images.githubusercontent.com/79465272/168415121-ffc83590-5819-4afd-98eb-9c441918e2f7.png)
 
 
+This project is Protocol-based IDS on Cloud Environment [GCP] using Apache Kafka & Spark Streaming.</br>
+The Purpose is to detect Brute force attacks, DDoS attacks, SQL injection, and Cross-Site Scripting.</br>
+Each detected intrusion is logged into the protocol-ids-output bucket according to timestamp, and SMS notifications will also be sent to telephone numbers that have been set using the Vonage SMS API.
+
 
 Stack used:
 
@@ -17,6 +21,14 @@ Stack used:
 
 
 ## How to Start
+
+
+###
+
+Make sure to Start both VMs:
+- KafkaVM
+- Dataproc Master Node
+
 
 ### Start Kafka Environment
 
@@ -68,19 +80,19 @@ Terminal 4
 
 
 
-## Template for Logs:
+## Template for Logs
 
-(ip:127.0.0.1, user-identifier:UD11,  name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700],  header:"GET /?id=message&password=message2 HTTP/1.0", status:200) 
+ip:127.0.0.1, user-identifier:UD11,  name:frank, time-stamp:[10/Oct/2000:13:55:36 -0700],  header:"GET /?id=message&password=message2 HTTP/1.0", status:200 
 
-References:</br>
-Wenyi Xu (2017) Visor: Real-time Log Monitor [Source Code and Log Pattern]. https://github.com/xuwenyihust/Visor
-payloadbox (2021) SQL Injection Payload List [Dataset]. https://github.com/payloadbox/sql-injection-payload-list
-payloadbox (2021) Cross Site Scripting  (XSS) Vulnerability Payload List [Dataset]. https://github.com/payloadbox/xss-payload-list
-iryndin (2018) 10K-Most-Popular-Passwords [Dataset]. https://github.com/iryndin/10K-Most-Popular-Passwords
+## References </br>
+Wenyi Xu (2017) Visor: Real-time Log Monitor [Source Code and Log Pattern]. https://github.com/xuwenyihust/Visor</br>
+payloadbox (2021) SQL Injection Payload List [Dataset]. https://github.com/payloadbox/sql-injection-payload-list</br>
+payloadbox (2021) Cross Site Scripting  (XSS) Vulnerability Payload List [Dataset]. https://github.com/payloadbox/xss-payload-list</br>
+iryndin (2018) 10K-Most-Popular-Passwords [Dataset]. https://github.com/iryndin/10K-Most-Popular-Passwords</br>
+ferasalnaem (2021) sqli-detection-using-ML [ML Testing Source Code]. https://github.com/ferasalnaem/sqli-detection-using-ML
 
 
-
-Version: 
+## Versions
 
   Scala 2.12.14
   Spark 3.1.2
