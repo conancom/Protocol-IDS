@@ -86,17 +86,15 @@ object XSS{
         println(c._1 + " Suspicious Behavior [XSS Attempt]")
 
         val messageBody = c._1 + " Suspicious Behavior [XSS Attempt] at " + Timestamp.from(Instant.now());
-/*
+
         val message = new TextMessage("ProtocolIDS", phoneNumber, messageBody)
-
-
 
         val response = client.getSmsClient.submitMessage(message)
 
         if (response.getMessages.get(0).getStatus eq MessageStatus.OK) System.out.println("Message sent successfully.")
 
         else System.out.println("Message failed with error: " + response.getMessages.get(0).getErrorText)
-*/
+
 
 
 
