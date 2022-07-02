@@ -3,8 +3,7 @@
 
 In this project we try to combine Apache Kafka and Apache Spark Streaming to identify and detect common ways of exploiting web applications.
 
-
-![System diagram_0](https://user-images.githubusercontent.com/79465272/168415121-ffc83590-5819-4afd-98eb-9c441918e2f7.png)
+![Security   Cloud Computing Project - Page 1(1)](https://user-images.githubusercontent.com/79465272/177006366-77369e4d-0ac6-462e-84b5-f3d86de20ea0.jpeg)
 
 
 This project is Protocol-based IDS on Cloud Environment [GCP] using Apache Kafka & Spark Streaming.</br>
