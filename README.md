@@ -13,6 +13,10 @@ Each detected intrusion is logged into the protocol-ids-output bucket according 
 
 The Source Code for each Spark Job is written in Scala and can be modified in the corresponding Scala Folders in the [Spark Jobs](https://github.com/conancom/Protocol-IDS/tree/main/Spark%20Jobs).
 
+## Publication
+
+L. Wirz, R. Tanthanathewin, A. Ketphet and S. Fugkeaw, "Design and Development of A Cloud-Based IDS using Apache Kafka and Spark Streaming," 2022 19th International Joint Conference on Computer Science and Software Engineering (JCSSE), Bangkok, Thailand, 2022, pp. 1-6, doi: 10.1109/JCSSE54890.2022.9836264.
+
 
 Stack used:
 
